@@ -1,0 +1,65 @@
+/*!
+Section 3: Body
+*/
+body {
+    font-size: .8625rem;
+    font-family: 'Open Sans',sans-serif
+}
+
+.dropdown-toggle:after {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-family: "Genericons";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    speak: none;
+    text-align: center;
+    text-decoration: inherit;
+    text-transform: none;
+    vertical-align: top
+}
+
+.dropdown-toggle:after {
+    color: #333;
+    content: "\f431";
+    font-size: 24px;
+    line-height: 24px;
+    position: relative;
+    top: 40px;
+    left: 1px;
+    width: 24px
+}
+
+img.alignright {
+    float: right;
+    margin: 0 0 1em 1em
+}
+
+img.alignleft {
+    float: left;
+    margin: 0 1em 1em 0
+}
+
+img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.alignright {
+    float: right
+}
+
+.alignleft {
+    float: left
+}
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}

@@ -1,0 +1,81 @@
+/*!
+Section 6: Footer
+*/
+
+footer {
+    margin-top: 5rem;
+    background: #0c3b78;
+    padding: 2rem 0 4rem 0;
+    font-size: .75rem
+}
+
+footer h2 {
+    font-size: .75rem;
+    color: #ffc600;
+    text-transform: uppercase;
+    font-weight: 700
+}
+
+footer .menu>li>a {
+    padding: 0 .25rem 0 0
+}
+
+footer a,footer p {
+    color: #fefefe;
+    font-size: .75rem
+}
+
+footer .footer-logo {
+    margin-bottom: 2.5rem
+}
+
+footer ul {
+    list-style: none;
+    margin-left: 0
+}
+
+footer ul li {
+    margin-bottom: .75rem
+}
+
+footer .underline>li>a {
+    text-decoration: underline
+}
+
+.footer-sm-links {
+    margin-bottom: 2rem
+}
+
+.mobile-app-link img {
+    margin-right: .75rem
+}
+
+@media screen and (min-width: 40em) {
+    .mobile-app-link img,.mobile-app-link h2 {
+        float:left
+    }
+}
+
+@media screen and (max-width: 39.9375em) {
+    .footer-sm-links {
+        width:210px;
+        margin: 0 auto 1rem auto
+    }
+
+    .footer-sm-links li a {
+        padding: 0
+    }
+
+    .footer-sm-links li a img {
+        margin: 0 .25rem
+    }
+
+    footer .row .columns {
+        border-bottom: 1px solid #5593db;
+        padding: 2rem 0 1rem 0
+    }
+
+    footer {
+        padding-bottom: 0
+    }
+}

@@ -1,0 +1,729 @@
+/*!
+Section 2: Content
+*/
+.pagecontainer {
+    margin-top: .2rem
+}
+
+.wp-post-image {
+    padding: 0.5rem 0 1rem 0;
+}
+
+header.entry-header p {
+    margin-bottom: 0
+}
+
+h1.entry-title {
+    line-height: 110%;
+    margin-top: .25rem;
+    font-size: 2.1875rem
+}
+
+.event-date p.month {
+    color: #000;
+    font-size: 1.6rem
+}
+
+.columns.nopadding {
+    padding: 0
+}
+
+.columns.stocker-highlight-container {
+    border-bottom: 5px solid #ffc600;
+    padding: 0;
+    margin-bottom: 40px
+}
+
+.columns.stocker-highlights {
+    padding-top: 30px
+}
+
+.columns.highlight-link {
+    text-align: center
+}
+
+.columns.highlight-content {
+    padding-top: 1rem;
+    min-height: 141px
+}
+
+.columns.stocker-badges-container {
+    padding-top: 30px
+}
+
+.columns.highlight-image {
+    padding: 0
+}
+
+.columns.highlight-text {
+    padding: 0;
+    box-shadow: inset 0 0 10px #dcdcdc
+}
+
+.columns.highlight-header {
+    background: #0c3b78
+}
+
+.columns.highlight-header h3 {
+    font-weight: 700;
+    color: #fefefe;
+    padding: 10px 0;
+    font-size: 1.4375rem;
+    text-align: center
+}
+
+.eventcontainer .eventhumbnail {
+    padding-top: 12px;
+    padding-left: 0;
+    padding-right: .5rem
+}
+
+.entry-footer {
+    background: #fff
+}
+
+article {
+    background: #fff
+}
+
+.gateway-header {
+    padding: 0
+}
+
+.sidebar-widget {
+    padding-top: 2.7rem
+}
+
+.breadcrumb-container {
+    padding-top: 20px;
+    padding-left: 2rem
+}
+
+a.button {
+    margin: 0 0 1rem 0
+}
+
+.lccc_event_header {
+    background: #0c3b78;
+    color: #fefefe;
+    margin-top: 0;
+    padding: 0 0 .5rem 1.5rem
+}
+
+#home-news h2.headertext {
+    margin: 0
+}
+
+.home-hero {
+    width: 100%;
+    background-image: url(/wp-content/themes/lorainccc/images/lccc_diningbookstore.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    height: 450px
+}
+
+.hero-image {
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover
+}
+
+.gateway {
+    background-image: url(/wp-content/themes/lorainccc/images/lccc_diningbookstore.jpg)
+}
+
+@media screen and (max-width: 39.9375em) {
+    .white-panel {
+        margin-top:3rem
+    }
+}
+
+.white-panel {
+    padding: 2rem 2rem 4rem 2rem;
+    background: rgba(255,255,255,0.9)
+}
+
+.orbit-bullets button {
+    height: .5rem;
+    width: .5rem
+}
+
+.orbit-bullets button.is-active {
+    background: #0c3b78
+}
+
+.orbit-slide h2 {
+    font-size: 2.1875rem;
+    color: #0c3b78;
+    line-height: 100%
+}
+
+.orbit-slide p {
+    font-size: .75rem
+}
+
+.cta-icons {
+    width: 100%;
+    background-color: #0055a5;
+    border-width: 5px 0;
+    border-style: solid;
+    border-color: #ffc600
+}
+
+.cta-icons .icon-label {
+    font-weight: 500;
+    color: #fefefe;
+    font-size: 1.125rem;
+    margin-top: 1rem
+}
+
+.cta-icons .row {
+    background-image: url(/wp-content/themes/lorainccc/images/logo_xl_lccc_blue.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    padding: 15px 0
+}
+
+.cta-icons .row .columns {
+    padding: 1.75rem 0
+}
+
+@media screen and (max-width: 39.9375em) {
+    .cta-icons {
+        margin-bottom:2rem
+    }
+}
+
+.yellow-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ffc600;
+    transition: background-color .25s ease-out,color .25s ease-out;
+    position: relative
+}
+
+.yellow-icon img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto
+}
+
+.yellow-icon:hover {
+    background-color: smart-scale(#ffc600,10%,25%)
+}
+
+.service-box {
+    margin-top: 3rem
+}
+
+@media screen and (min-width: 40em) {
+    .service-box-copy {
+        padding-left:0
+    }
+
+    .service-box-image {
+        padding-right: 0
+    }
+
+    .service-box .button {
+        position: absolute;
+        bottom: 1rem;
+        left: 63.5px
+    }
+
+    .service-box-container {
+        height: 100%
+    }
+}
+
+.service-box-header h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fefefe;
+    font-size: .6875rem;
+    background: #0c3b78;
+    line-height: 170%;
+    padding: 1rem 0;
+    margin-bottom: 0;
+    margin-top: 0
+}
+
+.service-box-header h2 span {
+    display: block;
+    font-size: 1.5625rem;
+    color: #ffc600;
+    text-transform: capitalize
+}
+
+.service-box-container {
+    box-shadow: inset 0 0 10px #dcdcdc
+}
+
+.service-box-copy {
+    position: relative;
+    padding: 0
+}
+
+.service-box-body {
+    font-size: .75rem;
+    padding: 2rem 1rem
+}
+
+.yellow-bottom-border {
+    width: 97%;
+    height: 5px;
+    background: #ffc600;
+    float: left;
+    margin-left: .9375rem
+}
+
+hr {
+    border: 0;
+    height: 20px;
+    width: 90%;
+    height: 50px;
+    padding: 2rem 0;
+    box-shadow: 0 15px 15px -15px #dcdcdc;
+    margin: -50px auto 10px
+}
+
+.event-list-row hr {
+    height: 0px;
+}
+
+.link-box-row {
+    margin-top: 1.125rem
+}
+
+.link-box {
+    margin-top: 1.875rem;
+    position: relative
+}
+
+.link-box img {
+    opacity: 1;
+    z-index: -1
+}
+
+.link-box:hover img {
+    filter: alpha(opacity=60);
+    opacity: .6
+}
+
+.link-box-label {
+    font-size: .875rem;
+    color: #fefefe;
+    font-weight: 600;
+    padding: .65rem 0
+}
+
+.green {
+    background: #6db400
+}
+
+.purple {
+    background: #67296e
+}
+
+.teal {
+    background: #068795
+}
+
+.orange {
+    background: #e36000
+}
+
+.medium-blue {
+    background: #0055a5
+}
+
+#home-news h2 {
+    margin: 2rem 0
+}
+
+#home-news .featured-image {
+    margin: .3rem 0
+}
+
+#home-news h3.post-title {
+    font-size: 1.125rem;
+    color: #0055a5;
+    font-weight: 600
+}
+
+#home-news p {
+    font-size: .75rem;
+    margin-bottom: .25rem
+}
+
+#home-news a.read-more {
+    font-size: .75rem;
+    color: #5593db;
+    font-weight: 800;
+    text-decoration: underline;
+    line-height: 100%
+}
+
+#home-news hr {
+    margin: -80px auto 40px
+}
+
+#home-news a.all-news {
+    margin-top: 3rem
+}
+
+.aside-header {
+    background: #0c3b78;
+    color: #fefefe;
+    margin-top: 2rem;
+    padding: .5rem 0
+}
+
+.aside-header h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0
+}
+
+.sidebar-menu-header {
+    background: #0c3b78;
+    color: #fefefe;
+    padding: .5rem
+}
+
+.sidebar-menu-header h3 {
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 0
+}
+
+.recent-events,.announcements {
+    box-shadow: inset 0 0 10px #dcdcdc;
+    padding: 1rem
+}
+
+.recent-events h4,.announcements h4 {
+    font-size: .75rem;
+    font-weight: 800;
+    color: #0055a5;
+    margin-bottom: .25rem;
+    text-transform: uppercase
+}
+
+.recent-events a:not(.button),.announcements a:not(.button) {
+    font-weight: 700;
+    text-decoration: underline;
+    font-size: .75rem
+}
+
+.recent-events .button,.announcements .button {
+    margin: 3rem 0 0 0
+}
+
+.recent-events .event .calendar-icon {
+    width: 45px;
+    height: 45px;
+    background-image: url(/wp-content/themes/lorainccc/images/icons/calendaricon_blue.svg);
+    padding-top: .75rem
+}
+
+.recent-events .event .calendar-icon span {
+    color: #0c3b78;
+    display: block;
+    line-height: 100%;
+    text-transform: uppercase;
+    font-weight: 700
+}
+
+.recent-events .event .calendar-icon .month {
+    font-size: .6rem
+}
+
+.recent-events .event .calendar-icon .day {
+    font-size: 1rem
+}
+
+.events-feed a.button {
+    margin-top: 1.5rem
+}
+
+.events-feed-item {
+    font-size: .75rem;
+    margin-top: 2.5rem
+}
+
+.events-feed-item h2 {
+    font-size: 1.25rem
+}
+
+.events-feed-item .add-to-calendar a img {
+    display: inline-block
+}
+
+.events-feed-item .calendar-icon {
+    width: 90px;
+    height: 90px;
+    background-image: url(/wp-content/themes/lorainccc/images/icons/calendaricon_blue.svg);
+    padding: 2rem 1rem;
+    text-align: center
+}
+
+.events-feed-item .calendar-icon span {
+    color: #0c3b78;
+    display: block;
+    line-height: 100%;
+    text-transform: uppercase;
+    font-weight: 700
+}
+
+.events-feed-item .calendar-icon .month {
+    font-size: .8rem
+}
+
+.events-feed-item .calendar-icon .day {
+    font-size: 1.75rem
+}
+
+.event-item-info {
+    margin-bottom: 1.5rem
+}
+
+.event-item-info span {
+    display: block
+}
+
+.event-item-description {
+    padding-top: 2.15rem;
+    margin-bottom: 1.5rem
+}
+
+.event-divider {
+    height: .25rem;
+    background: #dcdcdc;
+    width: 100%;
+    margin: 1rem 0
+}
+
+.fw-lead {
+    padding: 2.625rem 0
+}
+
+.fw-lead p {
+    font-size: 1rem
+}
+
+.lead p {
+    font-size: 1rem
+}
+
+.news-feed .featured-image img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem
+}
+
+.gateway-links {
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 -20px 20px -20px rgba(216,216,216,0.8);
+    -moz-box-shadow: 0 -20px 20px -20px rgba(216,216,216,0.8);
+    -webkit-box-shadow: 0 -20px 20px -20px rgba(216,216,216,0.8)
+}
+
+.gateway-links h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0
+}
+
+.gateway-links .menu>li>a {
+    font-size: .75rem;
+    color: #5593db;
+    text-decoration: underline;
+    padding: .5rem 0
+}
+
+.gateway-links img {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    width: 100%;
+    height: auto
+}
+
+.gateway-links a {
+    font-size: .8125rem;
+    text-decoration: underline;
+    font-weight: 800
+}
+
+.row .row.lccc-badge {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    font-size: .75rem;
+    color: #fefefe;
+    margin: 1rem 0 0 0
+}
+
+.row .row.lccc-badge h3 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #fefefe;
+    margin-bottom: .25rem
+}
+
+.row .row.lccc-badge .icon {
+    margin-top: .5rem
+}
+
+.crumbs {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: .8125rem
+}
+
+@media screen and (min-width: 40em) {
+    aside.columns {
+        padding-right:0;
+        padding-left: 0
+    }
+
+    .gateway-main,.home-left {
+        padding-right: 5rem
+    }
+
+    .main-right {
+        padding-left: 5rem
+    }
+}
+
+.callout-link {
+    color: #0055a5;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    line-height: 100%
+}
+
+.callout-link img {
+    display: inline-block;
+    margin-right: .5rem
+}
+
+.callout-link a,.callout-link span {
+    color: #5593db
+}
+
+.video-container {
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden
+}
+
+.video-container iframe,.video-container object,.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.is-drilldown ul li {
+    box-shadow: inset 0 0 10px #dcdcdc;
+    border: 1px solid #dcdcdc
+}
+
+.is-drilldown ul li a {
+    color: #0055a5;
+    font-weight: 700;
+    font-size: 1rem
+}
+
+.is-drilldown-submenu-parent>a::after {
+    border-left-color: #0055a5
+}
+
+.js-drilldown-back>a::before {
+    border-right-color: #0055a5
+}
+
+.sidebar-menu {
+    margin-bottom: 3rem;
+    margin-top: 1rem
+}
+
+.mobile-sidebar-bar {
+    padding-top: .5rem;
+    padding-bottom: .5rem
+}
+
+.mobile-sidebar-bar {
+    box-shadow: inset 0 0 10px #dcdcdc;
+    border: 1px solid #dcdcdc
+}
+
+.blue-panel {
+    background: #0055a5;
+    padding: .9375rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem
+}
+
+.blue-panel h2 {
+    color: #ffc600;
+    text-transform: uppercase
+}
+
+.blue-panel p {
+    color: #fefefe
+}
+
+.blue-panel a.button {
+    background: #5593db
+}
+
+.blue-panel img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem
+}
+
+.callout {
+    margin-top: 1rem;
+    margin-bottom: 2rem
+}
+
+.callout span {
+    display: block
+}
+
+.callout h2 {
+    font-weight: 600;
+    font-size: 1.25rem
+}
+
+.callout .name,.callout .hours-label {
+    font-weight: 700
+}
+
+.callout .callout-contact-method {
+    margin-top: 1.35rem
+}
+
+.callout .map-link {
+    margin-top: 4.45rem
+}
