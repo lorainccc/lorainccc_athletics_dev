@@ -4,7 +4,7 @@ Theme Name: lorainccc_athletics_dev
  Description:  Lorain County Community College Child Theme 
  Author: LCCC Web Team 
  Author URI: http://www.lorainccc.edu 
- Template: lccc-framework_v2 
+ Template: lccc-framework
  Version:1.0.0 
  License: GNU General Public License v2 or later 
  License URI: http://www.gnu.org/licenses/gpl-2.0.html 
@@ -65,7 +65,7 @@ Section 2: Content
 .cta-icons .icon-label{font-weight:500;color:#fefefe;font-size:1.125rem;margin-top:1rem}
 .cta-icons .row{background-image:url(/wp-content/themes/lorainccc/images/logo_xl_lccc_blue.png);background-position:center center;background-repeat:no-repeat;background-attachment:scroll;background-size:cover;padding:15px 0}
 .cta-icons .row .columns{padding:1.75rem 0}@media screen and (max-width:39.9375em){.cta-icons{margin-bottom:2rem}
-}.yellow-icon{width:100px;height:100px;border-radius:50%;background-color:#ffc600;transition:background-color .25s ease-out,color .25s ease-out;position:relative}
+}.yellow-icon{width:100px;height:100px;border-radius:50%;background-color:#ffc600;-webkit-transition:background-color .25s ease-out,color .25s ease-out;transition:background-color .25s ease-out,color .25s ease-out;position:relative}
 .yellow-icon img{position:absolute;top:0;bottom:0;left:0;right:0;margin:auto}.yellow-icon:hover{background-color:smart-scale(#ffc600,10%,25%)}
 .service-box{margin-top:3rem}@media screen and (min-width:40em){.service-box-copy{padding-left:0}
 .service-box-image{padding-right:0}.service-box .button{position:absolute;bottom:1rem;left:63.5px}
