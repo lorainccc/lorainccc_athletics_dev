@@ -33,7 +33,7 @@ get_header();
 				<?php } ?>
 				</div>
 				<div class="small-12 medium-5 large-4 columns">
-										<div class="small-12 medium-12 large-12 columns">
+										<div class="small-12 medium-12 large-12 columns nopadding">
 											<?php if ( is_active_sidebar( 'lccc-events-sidebar' ) ) { ?>
 																	<?php dynamic_sidebar( 'lccc-events-sidebar' ); ?>
 												<?php } ?>				
