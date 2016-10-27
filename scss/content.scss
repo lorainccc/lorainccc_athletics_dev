@@ -1,7 +1,32 @@
 /*!
 Section 2: Content
 */
-.pagecontainer {
+table.roster-table tbody{
+		border-right: 1px solid #CCC;
+		border-left: 1px solid #CCC;
+		border-bottom: 1px solid #CCC;
+}
+table.roster-table thead tr th{
+	 border-right: 1px solid #888888;
+  text-align: center;
+		color: #ffffff;
+} 
+table.roster-table thead tr{
+	   background: #0C3B78;
+				border: 1px solid;
+}
+table.roster-table tbody tr td{
+				text-align: center;
+}
+table.roster-table thead tr th:last-child{
+		border-right: none;
+}
+table.roster-table tbody tr.section-header{
+	    background: #fff;
+    border-bottom: 1px solid #CCC;
+				border-top: 1px solid #CCC;
+}
+.pagecontainer { 
     margin-top: .2rem
 }
 
