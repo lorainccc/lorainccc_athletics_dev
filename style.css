@@ -190,7 +190,7 @@ ul.sub-menu{padding-top:15px}/*! Ryan's Updated Menu Styling */@media screen and
 .main-navigation ul:not(.sub-menu)>li>a{font-size:1rem !important;color:#0055a5 !important;font-weight:700 !important}
 .dropdown-toggle{top:10px !important;right:4px}.main-navigation ul ul{margin-left:0 !important;padding-left:1rem}
 .main-navigation ul ul li{border-top:1px solid #dcdcdc !important;padding-top:.5rem;padding-bottom:.5rem}
-.main-navigation ul ul li a{color:#0055a5 !important}ul{margin-top:0 !important}li.current-menu-ancestor,li.current-menu-item{background:#dcdcdc}
+.main-navigation ul ul li a{color:#0055a5 !important}ul{margin-top:0 !important}li.current-menu-ancestor,.main-navigation li.current-menu-item{background:#dcdcdc}
 .main-navigation ul>li.current-menu-ancestor>ul>li{border-top:1px solid #fff}.main-navigation ul>li.current-menu-ancestor>ul>li.current-menu-item>a{font-weight:bold}
 #menu-header-shortcuts a:hover{text-decoration:underline}/*!
 Section 6: Footer

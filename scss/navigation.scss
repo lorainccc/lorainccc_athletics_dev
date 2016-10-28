@@ -428,7 +428,7 @@ ul {
 
 // Highlight current page in Left Nav
 
-li.current-menu-ancestor, li.current-menu-item {
+li.current-menu-ancestor,.main-navigation li.current-menu-item {
 background: #dcdcdc  ;
 }
 
