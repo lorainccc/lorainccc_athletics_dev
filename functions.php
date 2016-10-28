@@ -49,6 +49,7 @@ function lorainccc_setup() {
 		'mobile-primary' => esc_html__( 'Mobile Primary Menu', 'lorainccc' ),
 		'footer-quicklinks-nav' => esc_html__( 'Footer Quicklinks', 'lorainccc' ),
 		'footer-campus-location-nav' => esc_html__( 'Footer Campus Locations', 'lorainccc' ),
+  'header-shortcuts' => esc_html__( 'Header Shortcuts Menu', 'lorainccc' ),
 		'left-nav' => esc_html__( 'Left Nav', 'lorainccc' ),
 		'lccc-club-sports-left-nav' => esc_html__( 'Club Sports Left Nav', 'lorainccc' ),
 		'inside-athletics-left-nav' => esc_html__( 'Inside Athletics Left Nav', 'lorainccc' ),
