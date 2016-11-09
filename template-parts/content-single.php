@@ -13,6 +13,12 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+		<?php
+    if ( has_post_thumbnail() ) {
+    ?>
+	<div class="small-12 medium-12large-12 columns event-image"><?php the_post_thumbnail(); ?></div>
+<?php
+    }?>
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(

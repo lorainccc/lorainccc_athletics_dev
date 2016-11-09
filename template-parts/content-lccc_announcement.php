@@ -110,7 +110,7 @@ $location = event_meta_box_get_meta('announcement_meta_box_event_location');
  <?php
     if ( has_post_thumbnail() ) {
     ?>
-    	<div class="small-12 medium-12large-12 columns event-image"><?php the_post_thumbnail(); ?>
+	<div class="small-12 medium-12large-12 columns event-image"><?php the_post_thumbnail(); ?></div>
 <?php
     }?>
 	<div class="small-12 medium-12large-12 columns content-container">
