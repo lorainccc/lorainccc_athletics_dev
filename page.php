@@ -37,7 +37,7 @@ $menuslug = 'left-nav';
 													'container' => false,
 													'menu' => __( 'Drill Menu', 'textdomain' ),
 													'menu_class' => 'vertical menu',
-										'theme_location' => 'left-nav',
+										'theme_location' => $menuslug,
 													'menu_id' => 'sub-mobile-primary-menu',
 														//Recommend setting this to false, but if you need a fallback...
 													'fallback_cb' => 'lc_drill_menu_fallback',
