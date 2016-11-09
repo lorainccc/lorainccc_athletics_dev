@@ -89,22 +89,10 @@ $location = event_meta_box_get_meta('announcement_meta_box_event_location');
     <div class="small-12 medium-12 large-12 columns">
    <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
     </div>
-	<div class="small-12 medium-2 large-2 columns">
-	<?php
-			echo '<div class="small-12 medium-12 large-12 columns event-date">';
-                           echo '<div class="event-calendar-icon">';
-                            echo '</div>';
-							echo '<p class="stocker-month">'.$eventstartmonth.'</p>';
-							echo '<p class="stocker-day">'.$eventstartday.'</p>';
-			echo '</div>';	
-		?>
- </div>
-	<div class="small-12 medium-10 large-10 columns nopadding">
+
+	<div class="small-12 medium-12 large-12 columns">
 	<header class="entry-header">
         <?php the_category( ', ' ); ?>
-        <p><?php echo 'Date: '.$eventstartmonthfull.', '.$eventstartday.' '.$eventstartyear; ?></p>
-        <p><?php echo 'Time: '.$starttime; ?></p>
-          <p><?php echo 'Location: '.$location; ?></p>
 	</header><!-- .entry-header -->
 	</div>
  <?php
@@ -119,18 +107,7 @@ $location = event_meta_box_get_meta('announcement_meta_box_event_location');
 		<?php
 			the_content();
 ?>
-        </div>
-        <div class="small-12 medium-4 large-4 columns">
-       <?php echo '<a href="'.get_post_type_archive_link( $whattodisplay ).'">Back To All Announcements </a>';?>
-        </div>
-        <div class="small-12 medium-8 large-8 columns">
-        <?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'lorainccc' ),
-				'after'  => '</div>',
-			) );
-		?>
-        </div>
+        </div>     
 	</div><!-- .entry-content -->
 	</div>
 	<?php if ( get_edit_post_link() ) : ?>

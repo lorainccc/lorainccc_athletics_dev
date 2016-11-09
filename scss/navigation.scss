@@ -1,6 +1,24 @@
 /*!
 Section 5: Navigation
 */
+div.nav-links div.nav-previous{
+	    width: 50%;
+    display: block;
+    float: left;
+    text-align: left;
+}
+div.nav-links div.nav-next{
+	    width: 50%;
+    display: block;
+    float: right;
+    text-align: right;
+}
+@media only screen and (max-width: 40em) { 
+	div.nav-links div.nav-next , div.nav-links div.nav-previous{
+		width: 100%;
+		padding-bottom: 1rem;
+	}
+}
 .main-navigation li {
     box-shadow: none;
     position: relative;

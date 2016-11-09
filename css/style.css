@@ -35,7 +35,8 @@ h3.table-section-header{text-align:left;font-weight:bold;color:#0c3b78}.sidebar-
 Section 1: Foundation
 *//*!
 Section 2: Content
-*/table.roster-table tbody{border-right:1px solid #CCC;border-left:1px solid #CCC;border-bottom:1px solid #CCC}
+*/@media only screen and (min-width:40em){div.columns.event-list-event-container{padding:0}
+}div.row hr{margin:-80px auto 40px;height:25px;padding:10px 0;width:100%}table.roster-table tbody{border-right:1px solid #CCC;border-left:1px solid #CCC;border-bottom:1px solid #CCC}
 table.roster-table thead tr th{border-right:1px solid #888;text-align:center;color:#fff}
 table.roster-table thead tr{background:#0c3b78;border:1px solid}table.roster-table tbody tr td{text-align:center}
 table.roster-table thead tr th:last-child{border-right:0}table.roster-table tbody tr.section-header{background:#fff;border-bottom:1px solid #CCC;border-top:1px solid #CCC}
@@ -130,7 +131,9 @@ a.skip-link.screen-reader-text:focus{position:static;width:auto;height:auto}.ql-
 .ql-4{background-image:url(/wp-content/themes/lorainccc/images/icons/icon-campuslife_blue.svg)}
 /*!
 Section 5: Navigation
-*/.main-navigation li{box-shadow:none;position:relative;min-height:40px;padding-left:.5rem;padding-top:.3rem}
+*/div.nav-links div.nav-previous{width:50%;display:block;float:left;text-align:left}
+div.nav-links div.nav-next{width:50%;display:block;float:right;text-align:right}@media only screen and (max-width:40em){div.nav-links div.nav-next,div.nav-links div.nav-previous{width:100%;padding-bottom:1rem}
+}.main-navigation li{box-shadow:none;position:relative;min-height:40px;padding-left:.5rem;padding-top:.3rem}
 .main-navigation .nav-menu>ul>li:first-child,.main-navigation .nav-menu>li:first-child{border-top:0}
 @media screen and (min-width:40em){header{padding-top:1.5rem}}@media screen and (min-width:1074px){nav.menu-centered{height:36px}
 }header nav a,header nav a:hover{color:#fefefe;font-size:.875rem;font-weight:600}

@@ -1,6 +1,17 @@
 /*!
 Section 2: Content
 */
+@media only screen and (min-width: 40em) { 
+div.columns.event-list-event-container{
+	padding: 0; 
+}
+}
+div.row hr{
+	   margin: -80px auto 40px;
+   height: 25px;
+   padding: 10px 0;
+   width: 100%;
+}
 table.roster-table tbody{
 		border-right: 1px solid #CCC;
 		border-left: 1px solid #CCC;

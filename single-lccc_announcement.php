@@ -77,17 +77,13 @@ $menuslug = 'left-nav';
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'template-parts/content', 'single' ); ?>
+			<?php get_template_part( 'template-parts/content', 'lccc_announcement' ); ?>
 
-			<?php the_post_navigation(); ?>
-
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-	if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
-
+			<div class="small-12 medium-12 large-12 columns page-links"><?php the_post_navigation(); ?></div>
+					<div class="small-12 medium-12 large-12 columns " style="padding-top:1.5rem;">
+       <?php echo '<a href="'.get_post_type_archive_link( $whattodisplay ).'">Back To All Announcements </a>';?>
+        </div>
+	
 		<?php endwhile; // end of the loop. ?>
 
 		</main><!-- #main -->

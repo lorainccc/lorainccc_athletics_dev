@@ -10,6 +10,9 @@
 	echo lccc_breadcrumb() . "<a href='" . get_bloginfo('url') . "'>" . get_bloginfo('name') . "</a> > " . single_cat_title( '', false ) ;
     } elseif ( is_tax() ) {
         echo lccc_breadcrumb() . "<a href='" . get_bloginfo('url') . "'>" . get_bloginfo('name') . "</a> > " . single_cat_title( '', false ) ;
+    }elseif ( is_page() && $post->post_parent != 0 ) {
+     // Page is a Subpage
+     echo lccc_breadcrumb() . "<a href='" . get_bloginfo('url') . "'>" . get_bloginfo('name') . "</a> > " . "<a href='" . get_permalink( $post->post_parent ) ."'>" . get_the_title( $post->post_parent ) . "</a>" . " > " . get_the_title() ;
     }elseif ( is_page() && $post->post_parent > 0 ) {
  echo lccc_breadcrumb() . "<a href='" . get_bloginfo('url') . "'>" . get_bloginfo('name') . "</a> > ";
      }elseif ( is_single() ) {

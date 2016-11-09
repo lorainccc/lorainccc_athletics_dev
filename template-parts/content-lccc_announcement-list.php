@@ -7,120 +7,47 @@
  * @package lorainccc
  */
 ?>
-<?php 
-				$today = getdate();
-				$currentDay = $today['mday'];
-				$month = $today['mon'];
-				$year = $today['year'];
-				$firsteventdate ='';
-    $nexteventdate ='';
-				$todaysevents = '';
-				$temp = strLen($currentDay);            
-				$twoDay = '';
-	   $nextTwoDay = '';
-    if ($temp < 2){
-							$twoDay = '0' . $currentDay;
-				}else{
-							$twoDay = $currentDay;
-				}
-				$twomonth = '';
-    $tempmonth = strLen($month);
-    if ($tempmonth < 2){
-							$twomonth = '0' . $month;
-				}else{
-							$twomonth = $month;
-				}
-			 $nextDay = $currentDay + 1;
-				if ($temp < 2){
-							$nextTwoDay = '0' . $currentDay;
-				}else{
-							$nextTwoDay = $currentDay;
-				}
-		$starteventdate = 
-			event_meta_box_get_meta('announcement_start_date');
-		$starteventtime = event_meta_box_get_meta('announcement_start_time');  
-		$endeventdate = event_meta_box_get_meta('announcement_end_date');
-		$endtime = event_meta_box_get_meta('announcement_end_time');
-		
 
-										$starttimevar=strtotime($starteventtime);
-										$starttime=	date("h:i a",$starttimevar);
-										$starteventtimehours = date("G",$starttimevar);
-										$starteventtimeminutes = date("i",$starttimevar);
-		
-          $startdate=strtotime($starteventdate);
-										$eventstartdate=date("Y-m-d",$startdate);
-										$eventstartmonth=date("M",$startdate);
-                                        $eventstartmonthfull=date("F",$startdate);
-										$eventstartday =date("j",$startdate);
-                                        $eventstartyear =date("Y",$startdate);
-										
-										$endeventtimevar=strtotime($endtime);
-										$endeventtime = date("h:i a",$endeventtimevar);
-										$endeventtimehours = date("G",$endeventtimevar);
-										$endeventtimeminutes = date("i",$endeventtimevar);
-		
-										$enddate=strtotime($endeventdate);
-										$endeventdate = date("Y-m-d",$enddate);
-		
-										
-		$duration = '';
-		if($endeventtimehours == 0){
-			$endeventtimehours =24;
-		}
-		$durationhours =	$endeventtimehours - $starteventtimehours;
-		if($durationhours > 0){
-				if($durationhours == 24){
-				$duration .= '1 day';
-				}else{
-				$duration .= $durationhours.'hrs'; 
-				}
-		}
-		$durationminutes = $endeventtimeminutes - $starteventtimeminutes;
-		if($durationminutes > 0){
-			$duration .= $durationminutes.'mins';
-		}
-										
-		
-$location = event_meta_box_get_meta('announcement_meta_box_event_location');  
-$cost = event_meta_box_get_meta('announcement_meta_box_ticket_price_s_');
-?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="small-12 medium-2 large-2 columns">
-	<?php
-			echo '<div class="small-12 medium-12 large-12 columns event-date">';
-                           echo '<div class="event-calendar-icon">';
-                            echo '</div>';
-							echo '<p class="stocker-month">'.$eventstartmonth.'</p>';
-							echo '<p class="stocker-day">'.$eventstartday.'</p>';
-			echo '</div>';	
-		?>
+	<div class="small-12 medium-12 large-12 columns">
+<a href="<?php the_permalink();?>"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
  </div>
-	<div class="small-12 medium-4 large-3 columns nopadding">
-	<header class="entry-header">
-        <a href="<?php the_permalink();?>"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
+	<?php  if ( has_post_thumbnail() ) { ?>
+			<div class="small-12 medium-4 large-4 columns">
+							<?php the_post_thumbnail(); ?>
+			</div>
+			<div class="small-12 medium-8 large-8 columns" style="padding-top: 0.3rem;">
+		<header class="entry-header">
         <?php the_category( ', ' ); ?>
-        <p><?php echo 'Date: '.$eventstartmonthfull.', '.$eventstartday.' '.$eventstartyear; ?></p>
-        <p><?php echo 'Time: '.$starttime; ?></p>
-          <p><?php echo 'Location: '.$location; ?></p>
         <p>&nbsp;</p>
-        <a href="<?php the_permalink();?>">More Information</a>
 	</header><!-- .entry-header -->
-	</div>
-	<div class="small-12 medium-6 large-7 columns">
+	<div class="small-12 medium-12 large-12 columns nopadding">
 	<div class="entry-content">
 		<?php
 			the_excerpt();
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'lorainccc' ),
-				'after'  => '</div>',
-			) );
 		?>
-	</div><!-- .entry-content -->
+		      <a href="<?php the_permalink();?>">More Information</a>
+	</div><!-- .entry-content -->	
+			</div>
+					</div>
+	<?php }else{ ?>
+	<div class="small-12 medium-12 large-12 columns">
+	<header class="entry-header">
+        <?php the_category( ', ' ); ?>
+        <p>&nbsp;</p>
+       
+	</header><!-- .entry-header -->
 	</div>
+	<div class="small-12 medium-12 large-12 columns">
+	<div class="entry-content">
+		<?php
+			the_excerpt();
+		?>
+		 <a href="<?php the_permalink();?>">More Information</a>
+	</div><!-- .entry-content -->
+</div>
+	<?php } ?>
 	<?php if ( get_edit_post_link() ) : ?>
-
 			<?php
 				edit_post_link(
 					sprintf(
@@ -134,3 +61,6 @@ $cost = event_meta_box_get_meta('announcement_meta_box_ticket_price_s_');
 			?>
 	<?php endif; ?>
 </article><!-- #post-## -->
+<div class="column row">
+        <hr>
+      </div>
