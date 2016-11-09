@@ -7,12 +7,13 @@
 
 get_header(); ?>
 <div class="row page-content">
-			<div class="small-12 medium-12 large-12 columns nopadding show-for-small-only">
+				<div class="small-12 medium-12 large-12 columns nopadding show-for-small-only">
   <div class="row show-for-small-only sub-mobile-menu-row" style="background:#000;">
  <div class="small-2 columns" style="padding-top: 0.5rem;padding-left: 1.625rem;"> <span data-responsive-toggle="sub-responsive-menu" data-hide-for="medium">
       <button class="menu-icon" type="button" data-toggle></button>
       </span> </div>
-    <div class="small-10 columns nopadding"><h3 class="sub-mobile-menu-header" style="color:#ffffff;"><?php single_post_title(); ?> Menu</h3></div>
+    <div class="small-10 columns nopadding"><h3 class="sub-mobile-menu-header" style="color:#ffffff;">
+					<?php single_post_title(); ?> Menu</h3></div>
   </div>
   <div id="sub-responsive-menu" class="show-for-small-only">
     <ul class="vertical menu" data-drilldown data-parent-link="true">
