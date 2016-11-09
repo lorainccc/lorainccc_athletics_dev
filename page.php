@@ -37,7 +37,7 @@ $menuslug = 'left-nav';
 													'container' => false,
 													'menu' => __( 'Drill Menu', 'textdomain' ),
 													'menu_class' => 'vertical menu',
-										'theme_location' => $menuslug,
+										'theme_location' => 'left-nav',
 													'menu_id' => 'sub-mobile-primary-menu',
 														//Recommend setting this to false, but if you need a fallback...
 													'fallback_cb' => 'lc_drill_menu_fallback',
@@ -57,17 +57,11 @@ $menuslug = 'left-nav';
 		<div class="small-12 medium-12 large-12 columns sidebar-menu-header">
 	 <h3>
 			<?php 
-     
-    $current = $post->ID;
-     
-    $parent = $post->post_parent;
-     
-    $grandparent_get = get_post($parent);
-     
-    $grandparent = $grandparent_get->post_parent;
-     
+							$current = $post->ID;
+							$parent = $post->post_parent;
+							$grandparent_get = get_post($parent);
+							$grandparent = $grandparent_get->post_parent;
     ?>
-     
     <?php if ($root_parent = get_the_title($grandparent) !== $root_parent = get_the_title($current)) {echo get_the_title($grandparent); }else {echo get_the_title($parent).' Menu'; }?>
 			</h3>
 		</div>
