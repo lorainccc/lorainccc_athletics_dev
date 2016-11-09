@@ -11,17 +11,7 @@
  */
 
 get_header(); ?>
-<?php  
-global $post;
-$slug = get_post( $post )->post_name;
-$menuslug = $slug.'-left-nav';
-if ( has_nav_menu( $menuslug ) ) {
 
-}else{
-$menuslug = 'left-nav';
-}
-
-?>
 <div class="row page-content">
 		<div class="small-12 medium-12 large-12 columns nopadding show-for-small-only">
   <div class="row show-for-small-only sub-mobile-menu-row" style="background:#000;">
@@ -59,10 +49,16 @@ $menuslug = 'left-nav';
 			<?php 
 							$current = $post->ID;
 							$parent = $post->post_parent;
-							$grandparent_get = get_post($parent);
+							$parent_post = get_post($parent);
+							$parent_slug = $parent_post->post_name;
+							$grandparent_get = get_post($parent);		
 							$grandparent = $grandparent_get->post_parent;
-    ?>
-    <?php if ($root_parent = get_the_title($grandparent) !== $root_parent = get_the_title($current)) {echo get_the_title($grandparent); }else {echo get_the_title($parent).' Menu'; }?>
+							$grandparent_post = get_post($grandparent);
+							$grandparent_slug = $grandparent_post->post_name;
+
+			?>
+    <?php if ($root_parent = get_the_title($grandparent) !== $root_parent = get_the_title($current)) {echo get_the_title($grandparent) . ' Menu'; }else {echo get_the_title($parent).' Menu'; }
+			?>
 			</h3>
 		</div>
 	<?php	if ( has_nav_menu( 'left-nav' ) ) : ?>
@@ -70,7 +66,36 @@ $menuslug = 'left-nav';
 		<?php if ( has_nav_menu( 'left-nav' ) ) : ?>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php
-					// Primary navigation menu.
+			if ( $grandparent_slug != ''){
+							switch($grandparent_slug) {
+									case 'varsity-sports':
+											$menuslug = 'varsity-sports-left-nav';
+											break;
+									case 'lccc-club-sports':
+											$menuslug = 'lccc-club-sports-left-nav';
+											break;
+									case 'inside-athletics':
+											$menuslug = 'inside-athletics-left-nav';
+											break;
+									default:
+									;
+						}
+			}else{
+							switch($parent_slug) {
+									case 'varsity-sports':
+											$menuslug = 'varsity-sports-left-nav';
+											break;
+									case 'lccc-club-sports':
+											$menuslug = 'lccc-club-sports-left-nav';
+											break;
+									case 'inside-athletics':
+											$menuslug = 'inside-athletics-left-nav';
+											break;
+									default:
+									;
+						}				
+			}
+				// Primary navigation menu.
 					wp_nav_menu( array(
 						'menu_class'     => 'nav-menu',
 						'theme_location' => $menuslug,

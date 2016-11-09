@@ -6,17 +6,6 @@
  */
 
 get_header(); ?>
-<?php  
-global $post;
-$slug = get_post( $post )->post_name;
-$menuslug = $slug.'-left-nav';
-if ( has_nav_menu( $menuslug ) ) {
-
-}else{
-$menuslug = 'left-nav';
-}
-
-?>
 <div class="row page-content">
 			<div class="small-12 medium-12 large-12 columns nopadding show-for-small-only">
   <div class="row show-for-small-only sub-mobile-menu-row" style="background:#000;">
@@ -32,7 +21,7 @@ $menuslug = 'left-nav';
 													'container' => false,
 													'menu' => __( 'Drill Menu', 'textdomain' ),
 													'menu_class' => 'vertical menu',
-										'theme_location' => $menuslug,
+										'theme_location' => 'left-nav',
 													'menu_id' => 'sub-mobile-primary-menu',
 														//Recommend setting this to false, but if you need a fallback...
 													'fallback_cb' => 'lc_drill_menu_fallback',
@@ -59,7 +48,7 @@ $menuslug = 'left-nav';
 					// Primary navigation menu.
 					wp_nav_menu( array(
 						'menu_class'     => 'nav-menu',
-						'theme_location' => $menuslug,
+						'theme_location' => 'left-nav',
 					) );
 				?>
 			</nav><!-- .main-navigation -->
