@@ -27,7 +27,7 @@
 			the_excerpt();
 		?>
 		      <a href="<?php the_permalink();?>">More Information</a>
-	</div><!-- .entry-content -->	
+		</div><!-- .entry-content -->	
 			</div>
 					</div>
 	<?php }else{ ?>
@@ -38,8 +38,9 @@
        
 	</header><!-- .entry-header -->
 	</div>
+	
 	<div class="small-12 medium-12 large-12 columns">
-	<div class="entry-content">
+			<div class="entry-content">
 		<?php
 			the_excerpt();
 		?>
@@ -47,18 +48,22 @@
 	</div><!-- .entry-content -->
 </div>
 	<?php } ?>
+
 	<?php if ( get_edit_post_link() ) : ?>
+		<div class="small-12 medium-12 large-12 columns">
+			<p>&nbsp;</p>
 			<?php
 				edit_post_link(
 					sprintf(
 						/* translators: %s: Name of current post */
-						esc_html__( 'Edit %s', 'lorainccc' ),
+						esc_html__( 'Edit This Announcment  %s', 'lorainccc' ),
 						the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					),
 					'<span class="edit-link">',
 					'</span>'
 				);
 			?>
+				</div>
 	<?php endif; ?>
 </article><!-- #post-## -->
 <div class="column row">

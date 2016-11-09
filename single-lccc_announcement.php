@@ -81,7 +81,7 @@ $menuslug = 'left-nav';
 
 			<div class="small-12 medium-12 large-12 columns page-links"><?php the_post_navigation(); ?></div>
 					<div class="small-12 medium-12 large-12 columns " style="padding-top:1.5rem;">
-       <?php echo '<a href="'.get_post_type_archive_link( $whattodisplay ).'">Back To All Announcements </a>';?>
+         <?php echo '<a href="'.get_site_url().'/lccc_announcement/">Back To All Announcements </a>';?>
         </div>
 	
 		<?php endwhile; // end of the loop. ?>
