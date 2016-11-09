@@ -10,7 +10,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="small-12 medium-12 large-12 columns">
-<a href="<?php the_permalink();?>"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
+<a href="<?php the_permalink();?>"><?php the_title( '<h2 class="entry-title">', '</h2>' ); ?></a>
  </div>
 	<?php  if ( has_post_thumbnail() ) { ?>
 			<div class="small-12 medium-4 large-4 columns">

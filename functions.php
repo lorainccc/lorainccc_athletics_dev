@@ -54,6 +54,7 @@ function lorainccc_setup() {
 		'lccc-club-sports-left-nav' => esc_html__( 'Club Sports Left Nav', 'lorainccc' ),
 		'inside-athletics-left-nav' => esc_html__( 'Inside Athletics Left Nav', 'lorainccc' ),
 		'varsity-sports-left-nav' => esc_html__( 'Varsity Sports Left Nav', 'lorainccc' ),
+		'athletics-footer-quicklink-nav' => esc_html__( 'Athletics Footer Quicklink Nav', 'lorainccc' ),
 	) );
 	/*
 	 * Switch default core markup for search form, comment form, and comments
