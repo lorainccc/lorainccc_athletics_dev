@@ -22,8 +22,8 @@ Mixins Section: LCCC Mixins
 *//*!
 Text Section
 */h1{font-size:2.1875rem;margin-top:.25rem;font-family:'Raleway',sans-serif}
-h3{color:#0055a5;font-size:1.4875rem;margin-top:.25rem;font-family:'Raleway',sans-serif}
-.columns.sidebar-menu-header h4{font-weight:700;font-family:'Raleway',sans-serif;font-size:1.125rem}
+h3{color:#0055a5;font-size:1.3475rem;margin-top:.25rem;font-family:'Raleway',sans-serif}
+h4{font-weight:700;font-family:'Raleway',sans-serif;font-size:1.125rem}
 h1,h2{color:#0055a5;font-weight:700;font-family:'Raleway',sans-serif}
 h2{line-height:110%;margin-top:.25rem;font-size:1.625rem;font-family:'Raleway',sans-serif}
 h2.cta-h2{text-transform:uppercase;font-family:'Raleway',sans-serif}
