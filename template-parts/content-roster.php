@@ -46,7 +46,7 @@
 					<?php echo '<p>'.$jerseynumber.'</p>'; ?>
 	</td>
 	<td>
-					<?php 	the_title( '<h4 class="roster-name">', '</h4>' ); ?>
+					<?php 	the_title( '<p class="roster-name">', '</p>' ); ?>
 	</td>
 	<td>
 				<?php 

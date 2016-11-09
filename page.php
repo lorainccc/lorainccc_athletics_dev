@@ -27,7 +27,7 @@ get_header(); ?>
 													'container' => false,
 													'menu' => __( 'Drill Menu', 'textdomain' ),
 													'menu_class' => 'vertical menu',
-										'theme_location' => $menuslug,
+										'theme_location' => 'left-nav',
 													'menu_id' => 'sub-mobile-primary-menu',
 														//Recommend setting this to false, but if you need a fallback...
 													'fallback_cb' => 'lc_drill_menu_fallback',
@@ -48,25 +48,35 @@ get_header(); ?>
 	 <h3>
 			<?php 
 							$current = $post->ID;
+							
 							$parent = $post->post_parent;
+							
 							$parent_post = get_post($parent);
 							$parent_slug = $parent_post->post_name;
-							$grandparent_get = get_post($parent);		
-							$grandparent = $grandparent_get->post_parent;
-							$grandparent_post = get_post($grandparent);
-							$grandparent_slug = $grandparent_post->post_name;
+							
+							$parent_id = $parent_post->ID;
 
+							$grandparent_id = $parent_post->post_parent;
+
+							$grandparent_post = get_post($grandparent_id);
+							$grandparent_slug = $grandparent_post->post_name;
+							
 			?>
-    <?php if ($root_parent = get_the_title($grandparent) !== $root_parent = get_the_title($current)) {echo get_the_title($grandparent) . ' Menu'; }else {echo get_the_title($parent).' Menu'; }
+    <?php if ($root_parent = get_the_title($grandparent_id) !== $root_parent = get_the_title($current)) {echo get_the_title($grandparent_id) . ' Menu'; }else {echo get_the_title($parent).' Menu'; }
 			?>
 			</h3>
+		<?php 
+			//echo 'current-> ' . $current . ' slug-> ' . $post->post_name . '<br />';
+			//echo 'parent-> ' . $parent_id . ' slug-> ' . $parent_slug  . '<br />';
+			//echo 'grandparent-> ' . $grandparent_id . ' slug-> ' . $grandparent_slug . '<br />';
+		?>
 		</div>
 	<?php	if ( has_nav_menu( 'left-nav' ) ) : ?>
 	<div id="secondary" class="medium-12 columns secondary nopadding">
 		<?php if ( has_nav_menu( 'left-nav' ) ) : ?>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php
-			if ( $grandparent_slug != ''){
+			if ( $grandparent_id != '0'){
 							switch($grandparent_slug) {
 									case 'varsity-sports':
 											$menuslug = 'varsity-sports-left-nav';
@@ -78,7 +88,9 @@ get_header(); ?>
 											$menuslug = 'inside-athletics-left-nav';
 											break;
 									default:
-									;
+											$menuslug = 'left-nav';
+											break;
+									
 						}
 			}else{
 							switch($parent_slug) {
@@ -92,7 +104,9 @@ get_header(); ?>
 											$menuslug = 'inside-athletics-left-nav';
 											break;
 									default:
-									;
+											$menuslug = 'left-nav';
+											break;
+									
 						}				
 			}
 				// Primary navigation menu.

@@ -16,7 +16,7 @@
 ?>
 <tr>
 	<td style="text-align:left; padding-left:1rem;">
-					<?php 	the_title( '<h4 class="roster-name">', '</h4>' ); ?>
+					<?php 	the_title( '<p class="roster-name">', '</p>' ); ?>
 	</td>
 	<td>
 					<?php echo '<p>'.$year.'</p>'; ?>

@@ -39,8 +39,8 @@ h1,h2{color:#0055a5;font-weight:700;font-family:'Raleway',sans-serif}
 h2{line-height:110%;margin-top:.25rem;font-size:1.625rem;font-family:'Raleway',sans-serif}
 h2.cta-h2{text-transform:uppercase;font-family:'Raleway',sans-serif}
 p{font-weight:500;font-size:.8625rem;font-family:'Open Sans',sans-serif}
-a{font-family:'Open Sans',sans-serif}h4.roster-name{font-size:1.1625rem;font-family:'Raleway',sans-serif}
-h3.table-section-header{text-align:left;font-weight:bold;color:#0c3b78}.sidebar-menu-header h3{text-transform:uppercase;font-size:1.125rem;font-weight:700;margin-bottom:0}
+a{font-family:'Open Sans',sans-serif}p.roster-name{font-size:.8625rem;font-family:'Raleway',sans-serif}
+p.table-section-header{text-align:left;font-weight:bold;color:#0c3b78}.sidebar-menu-header h3{text-transform:uppercase;font-size:1.125rem;font-weight:700;margin-bottom:0}
 .columns.sidebar-menu-header h3{color:#fff}@media screen and (max-width:39.9375em){h1{font-size:1.35rem;line-height:105%}
 }/*!
 Section 1: Foundation

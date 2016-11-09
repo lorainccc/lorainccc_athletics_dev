@@ -14,7 +14,7 @@ get_header(); ?>
 <div class="medium-4 large-4 columns hide-for-small-only">
 	<div class="small-12 medium-12 large-12 columns sidebar-widget">
 		<div class="small-12 medium-12 large-12 columns sidebar-menu-header">
-		<h3><?php echo bloginfo('the-title'); ?></h3>
+		<h3>Varsity Sports Menu</h3>
 		</div>
 	<?php	if ( has_nav_menu( 'left-nav' ) ) : ?>
 	<div id="secondary" class="medium-12 columns secondary nopadding">
@@ -117,7 +117,7 @@ get_header(); ?>
 												</tr>
   										</thead>
 												<tr class="section-header">
-															<td><h3 class="table-section-header">Women</h3></td>
+															<td><p class="table-section-header">Women</p></td>
 															<td class="hide-for-small-only"><!-- ... -->	</td>
 															<td class="hide-for-small-only"><!-- ... -->	</td>
 															<td class="hide-for-small-only"><!-- ... -->	</td>
@@ -142,7 +142,7 @@ get_header(); ?>
 											endif;
 										?>
 											<tr class="section-header">
-															<td><h3  class="table-section-header">Men</h3></td>
+															<td><p  class="table-section-header">Men</p></td>
 															<td class="hide-for-small-only"><!-- ... -->	</td>
 															<td class="hide-for-small-only"><!-- ... -->	</td>
 															<td class="hide-for-small-only"><!-- ... -->	</td>
