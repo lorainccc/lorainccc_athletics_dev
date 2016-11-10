@@ -37,9 +37,9 @@
 								or (440) 365-5222<br>
 				<?php } 
 				if($footer_contact_email != ''){?>
-				<a href="mailto:<?php echo $footer_contact_email; ?>"><?php echo $footer_contact_email; ?></a> 
+				<a class="underline" href="mailto:<?php echo $footer_contact_email; ?>"><?php echo $footer_contact_email; ?></a> 
 				<?php }else {?>   
-					<a href="mailto:info@lorainccc.edu">info@lorainccc.edu</a> 
+					<a class="underline" href="mailto:info@lorainccc.edu">info@lorainccc.edu</a> 
 					<?php } ?>
 								</p>
         <ul class="underline">

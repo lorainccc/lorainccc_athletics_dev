@@ -38,12 +38,15 @@ footer ul li {
     margin-bottom: .75rem
 }
 
-footer .underline>li>a {
-    text-decoration: underline
+footer .underline>li>a:hover {
+    text-decoration: underline;
 }
 
+footer a.underline:hover {
+    text-decoration: underline;
+}
 .footer-sm-links {
-    margin-bottom: 2rem
+    margin-bottom: 2rem;
 }
 
 .mobile-app-link img {

@@ -62,7 +62,7 @@ get_header(); ?>
 							$grandparent_slug = $grandparent_post->post_name;
 							
 			?>
-    <?php if ($root_parent = get_the_title($grandparent_id) !== $root_parent = get_the_title($current)) {echo get_the_title($grandparent_id) . ' Menu'; }else {echo get_the_title($parent).' Menu'; }
+    <?php if ($root_parent = get_the_title($grandparent_id) !== $root_parent = get_the_title($current)) {echo get_the_title($grandparent_id); }else {echo get_the_title($parent); }
 			?>
 			</h3>
 		<?php 
