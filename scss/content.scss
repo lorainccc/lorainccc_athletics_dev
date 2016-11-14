@@ -1,9 +1,9 @@
 /*!
 Section 2: Content
 */
-@media only screen and (min-width: 40em) { 
+@media only screen and (min-width: 40em) {
 div.columns.event-list-event-container{
-	padding: 0; 
+	padding: 0;
 }
 }
 div.row hr{
@@ -21,7 +21,7 @@ table.roster-table thead tr th{
 	 border-right: 1px solid #888888;
   text-align: center;
 		color: #ffffff;
-} 
+}
 table.roster-table thead tr{
 	   background: #0C3B78;
 				border: 1px solid;
@@ -37,7 +37,7 @@ table.roster-table tbody tr.section-header{
     border-bottom: 1px solid #CCC;
 				border-top: 1px solid #CCC;
 }
-.pagecontainer { 
+.pagecontainer {
     margin-top: .2rem
 }
 
@@ -763,3 +763,5 @@ hr {
 .callout .map-link {
     margin-top: 4.45rem
 }
+
+div.content-area ul li {margin: 0 0 0 6px;font-size: .8625rem;}
