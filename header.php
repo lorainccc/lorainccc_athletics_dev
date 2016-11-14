@@ -21,7 +21,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		  <div class="row show-for-medium">
-    <div class="large-6 medium-6 columns"><a href="<?php echo esc_url( home_url( '' ) ); ?>"><img src="https://test.lorainccc.edu/athletics/wp-content/uploads/sites/42/2016/07/Commodores-Athletics-web-logo.png" height="92" width="400" alt="Lorain County Community College Logo" /></a>  </div>
+    <div class="large-6 medium-6 columns"><a href="<?php echo esc_url( home_url( '' ) ); ?>"><img src="https://test.lorainccc.edu/athletics/wp-content/uploads/sites/21/2016/07/Commodores-Athletics-web-logo.png" height="92" width="400" alt="Lorain County Community College Logo" /></a>  </div>
     <div class="large-6 medium-6 columns">
       <ul id="header-menu" class="menu align-right">
  <li><a href="http://www.lorainccc.edu/" class="ql-icon ql-3" target="_blank">LCCC Home</a></li>
