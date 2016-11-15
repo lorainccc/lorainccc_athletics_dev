@@ -76,43 +76,11 @@ get_header(); ?>
 		<?php if ( has_nav_menu( 'left-nav' ) ) : ?>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php
-			if ( $grandparent_id != '0'){
-							switch($grandparent_slug) {
-									case 'varsity-sports':
-											$menuslug = 'varsity-sports-left-nav';
-											break;
-									case 'lccc-club-sports':
-											$menuslug = 'lccc-club-sports-left-nav';
-											break;
-									case 'inside-athletics':
-											$menuslug = 'inside-athletics-left-nav';
-											break;
-									default:
-											$menuslug = 'left-nav';
-											break;
-									
-						}
-			}else{
-							switch($parent_slug) {
-									case 'varsity-sports':
-											$menuslug = 'varsity-sports-left-nav';
-											break;
-									case 'lccc-club-sports':
-											$menuslug = 'lccc-club-sports-left-nav';
-											break;
-									case 'inside-athletics':
-											$menuslug = 'inside-athletics-left-nav';
-											break;
-									default:
-											$menuslug = 'left-nav';
-											break;
-									
-						}				
-			}
+
 				// Primary navigation menu.
 					wp_nav_menu( array(
 						'menu_class'     => 'nav-menu',
-						'theme_location' => $menuslug,
+						'theme_location' => 'left-nav',
 					) );
 				?>
 			</nav><!-- .main-navigation -->
