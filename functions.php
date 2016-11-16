@@ -302,4 +302,73 @@ function custom_excerpt_length($length) {
 }
 add_filter('excerpt_length', 'custom_excerpt_length');
 
+//hook into the init action and call create_book_taxonomies when it fires
+add_action( 'init', 'create_athletic_category_hierarchical_taxonomy', 0 );
+
+//create a custom taxonomy name it topics for your posts
+
+function create_athletic_category_hierarchical_taxonomy() {
+
+// Add new taxonomy, make it hierarchical like categories
+//first do the translations part for GUI
+
+  $labels = array(
+    'name' => _x( 'Athletic Category', 'taxonomy general name' ),
+    'singular_name' => _x( 'Athletic Category', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Athletic Categories' ),
+    'all_items' => __( 'All Athletic Categories' ),
+    'parent_item' => __( 'Parent Athletic Category' ),
+    'parent_item_colon' => __( 'Parent Athletic Category:' ),
+    'edit_item' => __( 'Edit Athletic Category' ), 
+    'update_item' => __( 'Update Athletic Category' ),
+    'add_new_item' => __( 'Add New Athletic Category' ),
+    'new_item_name' => __( 'New Athletic Category Name' ),
+    'menu_name' => __( 'Athletic Categories' ),
+  ); 	
+
+// Now register the taxonomy
+
+  register_taxonomy('athletic_category',array('lccc_announcement'), array(
+    'hierarchical' => true,
+    'labels' => $labels,
+    'show_ui' => true,
+    'show_admin_column' => true,
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'athletic-category' ),
+  ));
+
+}
+
+/*
+ *
+ * Add filtering support to Admin list for the LCCC Event Custom Post Type.
+ *
+ */
+
+function lccc_athletic_cpt_add_taxonomy_filters() {
+	global $typenow;
+ 
+	// an array of all the taxonomyies you want to display. Use the taxonomy name or slug
+	$taxonomies = array('athletic_category');
+ 
+	// must set this to the post type you want the filter(s) displayed on
+	if( $typenow == 'lccc_announcement' ){
+ 
+		foreach ($taxonomies as $tax_slug) {
+			$tax_obj = get_taxonomy($tax_slug);
+			$tax_name = $tax_obj->labels->name;
+			$terms = get_terms($tax_slug);
+			if(count($terms) > 0) {
+				echo "<select name='$tax_slug' id='$tax_slug' class='postform'>";
+				echo "<option value=''>Show All $tax_name</option>";
+				foreach ($terms as $term) { 
+					echo '<option value='. $term->slug, $_GET[$tax_slug] == $term->slug ? ' selected="selected"' : '','>' . $term->name .' (' . $term->count .')</option>'; 
+				}
+				echo "</select>";
+			}
+		}
+	}
+}
+add_action( 'restrict_manage_posts', 'lccc_athletic_cpt_add_taxonomy_filters' );
+
 ?>
