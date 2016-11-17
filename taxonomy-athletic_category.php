@@ -104,7 +104,9 @@ get_header(); ?>
                 echo do_shortcode($page[0]->post_content);
             echo '<br/>';
 												edit_post_link('Edit This Page', '<p>', '</p>', $page[0]->ID );
-										  echo '<h2 class="announcementheader">'.'News & Announcements'.'</h2>';
+										 echo '</div>'; 
+											echo '<div class="small-12 medium-12 large-12 columns">';		
+														echo '<h2 class="announcementheader">'.'News & Announcements'.'</h2>';
 											echo '</div>';	
 											echo	'<div class="column row">';
 											echo '<hr>';
