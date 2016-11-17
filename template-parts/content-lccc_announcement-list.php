@@ -36,7 +36,7 @@ $subheading = announcement_meta_box_get_meta('announcement_meta_box_sub_heading'
 	<?php }else{ ?>
 	<div class="small-12 medium-12 large-12 columns">
 	<header class="entry-header">
-        <?php the_category( ', ' ); ?>
+        <?php echo get_the_term_list( $post->ID, 'athletic_category', '', ', ' ); ?> 
         <p>&nbsp;</p>
        
 	</header><!-- .entry-header -->

@@ -66,5 +66,20 @@
 				}		
 		?>
 	</div><!-- .entry-content -->
-
+    	<?php if ( get_edit_post_link() ) : ?>
+		<div class="small-12 medium-12 large-12 columns">
+			<p>&nbsp;</p>
+			<?php
+				edit_post_link(
+					sprintf(
+						/* translators: %s: Name of current post */
+						esc_html__( 'Edit This Announcment  %s', 'lorainccc' ),
+						the_title( '<span class="screen-reader-text">"', '"</span>', false )
+					),
+					'<span class="edit-link">',
+					'</span>'
+				);
+			?>
+				</div>
+	<?php endif; ?>
 </article><!-- #post-## -->
