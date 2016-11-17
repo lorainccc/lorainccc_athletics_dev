@@ -31,7 +31,7 @@ div.nav-links div.nav-next{
     border-top: 0;
 }
 
-@media screen and (min-width: 40em) {
+@media screen and (max-width: 40em) {
     header {
         padding-top:1.5rem
     }

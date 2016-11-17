@@ -21,7 +21,7 @@ $subheading = announcement_meta_box_get_meta('announcement_meta_box_sub_heading'
 			</div>
 			<div class="small-12 medium-8 large-8 columns" style="padding-top: 0.3rem;">
 		<header class="entry-header">
-        <?php the_category( ', ' ); ?>
+        <?php echo get_the_term_list( $post->ID, 'athletic_category', '', ', ' ); ?> 
         <p>&nbsp;</p>
 	</header><!-- .entry-header -->
 	<div class="small-12 medium-12 large-12 columns nopadding">
