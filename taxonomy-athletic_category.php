@@ -99,11 +99,17 @@ get_header(); ?>
             );       
             if ( $page )
             {
+											echo '<div class="small-12 medium-12 large-12 columns">';		
                	echo get_the_post_thumbnail( $page[0]->ID );
                 echo do_shortcode($page[0]->post_content);
-                edit_post_link('Edit This Page', '<p>', '</p>', $page[0]->ID );
-           
-            echo '<br/>'.'<h2 class="announcementheader">'.'News & Announcements'.'</h2>'.'<br/>';
+            echo '<br/>';
+												edit_post_link('Edit This Page', '<p>', '</p>', $page[0]->ID );
+										  echo '<h2 class="announcementheader">'.'News & Announcements'.'</h2>';
+											echo '</div>';	
+											echo	'<div class="column row">';
+											echo '<hr>';
+											echo '</div>';
+		
              }    
             ?>
 			<?php /* Start the Loop */ ?>
