@@ -112,7 +112,8 @@ hr{border:0;height:20px;width:90%;height:50px;padding:2rem 0;box-shadow:0 15px 1
 .blue-panel a.button{background:#5593db}.blue-panel img{width:100%;height:auto;margin-bottom:1rem}
 .callout{margin-top:1rem;margin-bottom:2rem}.callout span{display:block}.callout h2{font-weight:600;font-size:1.25rem}
 .callout .name,.callout .hours-label{font-weight:700}.callout .callout-contact-method{margin-top:1.35rem}
-.callout .map-link{margin-top:4.45rem}/*!
+.callout .map-link{margin-top:4.45rem}div.content-area ul li{margin:0 0 0 10px;font-size:.8625rem}
+/*!
 Section 3: Body
 */body{font-size:.8625rem;font-family:'Open Sans',sans-serif}
 .dropdown-toggle:after{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-family:"Genericons";font-size:16px;font-style:normal;font-weight:normal;font-variant:normal;line-height:1;speak:none;text-align:center;text-decoration:inherit;text-transform:none;vertical-align:top}
@@ -135,7 +136,7 @@ Section 5: Navigation
 div.nav-links div.nav-next{width:50%;display:block;float:right;text-align:right}@media only screen and (max-width:40em){div.nav-links div.nav-next,div.nav-links div.nav-previous{width:100%;padding-bottom:1rem}
 }.main-navigation li{box-shadow:none;position:relative;min-height:40px;padding-left:.5rem;padding-top:.3rem}
 .main-navigation .nav-menu>ul>li:first-child,.main-navigation .nav-menu>li:first-child{border-top:0}
-@media screen and (min-width:40em){header{padding-top:1.5rem}}@media screen and (min-width:1074px){nav.menu-centered{height:36px}
+@media screen and (max-width:40em){header{padding-top:1.5rem}}@media screen and (min-width:1074px){nav.menu-centered{height:36px}
 }header nav a,header nav a:hover{color:#fefefe;font-size:.875rem;font-weight:600}
 header ul#header-menu li a{font-size:.78125rem;color:#0055a5;font-weight:700}header .menu:not(#header-menu):not(.vertical) li:hover,header .dropdown.menu .submenu{background:#0c3b78;border:0}
 header li.is-submenu-item{padding:.5rem 0;border-top:1px solid #0055a5}header .submenu{margin-top:-1px}

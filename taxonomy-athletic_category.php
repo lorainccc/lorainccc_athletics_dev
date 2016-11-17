@@ -99,15 +99,15 @@ get_header(); ?>
             );       
             if ( $page )
             {
-                echo $page[0]->post_content;
-                edit_post_link('Edit This Page', '<p>', '</p>');
+               	echo get_the_post_thumbnail( $page[0]->ID );
+                echo do_shortcode($page[0]->post_content);
+                edit_post_link('Edit This Page', '<p>', '</p>', $page[0]->ID );
            
             echo '<br/>'.'<h2 class="announcementheader">'.'News & Announcements'.'</h2>'.'<br/>';
              }    
             ?>
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-
 				<?php
 					/* Include the Post-Format-specific template for the content.
 					 * If you want to override this in a child theme, then include a file
