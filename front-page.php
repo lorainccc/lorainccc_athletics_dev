@@ -46,14 +46,16 @@ get_header();
 				</div>				
   </section>		
 			<?php if ( is_active_sidebar( 'sponsor-sidebar' ) ) { ?>
-				  <div class="column row">
-    <hr />
-  </div>
-		<div class="column row">
-  <div class="small-12 medium-12 large-12 columns sponsors-row">
-			<?php dynamic_sidebar( 'sponsor-sidebar' ); ?>
-		</div> 
-  </div>
+		<section class="row">
+							<div class="column row">
+									<hr />
+							</div>
+							<div class="column row">
+										<div class="small-12 medium-12 large-12 columns sponsors-row">
+											<?php dynamic_sidebar( 'sponsor-sidebar' ); ?>
+										</div> 
+							</div>
+			</section>
 			<?php } ?>			
 		</main><!-- #main -->
 	</div><!-- #primary -->
