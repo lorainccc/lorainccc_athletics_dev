@@ -91,9 +91,10 @@ get_header(); ?>
             <?php 
             $term_id = get_queried_object()->term_id;
             $term = get_term($term_id, $taxonomy);
-            $page = get_posts(
+												$pagecontent = $term->slug.'-content';
+												$page = get_posts(
                 array(
-                    'name'      => $term->slug,
+                    'name'      => $pagecontent,
                     'post_type' => 'page'
                 )
             );       
