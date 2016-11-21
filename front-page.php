@@ -46,7 +46,7 @@ get_header();
 				</div>				
   </section>		
 			<?php if ( is_active_sidebar( 'sponsor-sidebar' ) ) { ?>
-		<section class="row">
+		<div class="small-12 medium-12 large-12 columns">
 							<div class="column row">
 									<hr />
 							</div>
@@ -55,7 +55,7 @@ get_header();
 											<?php dynamic_sidebar( 'sponsor-sidebar' ); ?>
 										</div> 
 							</div>
-			</section>
+			</div>
 			<?php } ?>			
 		</main><!-- #main -->
 	</div><!-- #primary -->
