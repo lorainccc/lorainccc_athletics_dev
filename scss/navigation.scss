@@ -49,6 +49,7 @@ header nav a,header nav a:hover {
     font-weight: 600
 }
 
+.nav-menu a{ font-size: .875rem; }
 header ul#header-menu li a {
     font-size: .78125rem;
     color: #0055a5;
@@ -84,7 +85,7 @@ header .dropdown.menu .submenu li:hover a {
 
 header li.is-submenu-item:not(.is-drilldown-submenu-item) a {
     color: #fefefe;
-    font-size: .75rem
+    font-size: .85rem;
 }
 
 header li.is-drilldown-submenu-item {
