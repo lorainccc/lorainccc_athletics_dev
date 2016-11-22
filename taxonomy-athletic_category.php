@@ -66,7 +66,7 @@ get_header(); ?>
 				// Primary navigation menu.
 					wp_nav_menu( array(
 						'menu_class'     => 'nav-menu',
-						'theme_location' => 'left-nav',
+						'theme_location' => 'varsity-sports-left-nav',
 					) );
 				?>
 			</nav><!-- .main-navigation -->

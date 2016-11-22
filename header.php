@@ -22,16 +22,32 @@
 	<header id="masthead" class="site-header" role="banner">
 		  <div class="row show-for-medium">
     <div class="large-6 medium-6 columns"><a href="<?php echo esc_url( home_url( '' ) ); ?>"><img src="https://test.lorainccc.edu/athletics/wp-content/uploads/sites/21/2016/07/Commodores-Athletics-web-logo.png" height="92" width="400" alt="Lorain County Community College Logo" /></a>  </div>
-    <div class="large-6 medium-6 columns">
-      <ul id="header-menu" class="menu align-right">
- <li><a href="http://www.lorainccc.edu/" class="ql-icon ql-3" target="_blank">LCCC Home</a></li>
-      </ul>
+    <div class="large-6 medium-6 columns header-menu-widgets">
+<!--      <ul id="header-menu" class="menu align-right">
+        <li><a href="#" class="ql-icon ql-1">A-Z Index</a></li>
+        <li><a href="/faculty-and-staff/" class="ql-icon ql-2">Faculty/Staff</a></li>
+        <li><a href="https://canvas.lorainccc.edu" class="ql-icon ql-3" target="_blank">Canvas</a></li>
+        <li><a href="https://mycampus.lorainccc.edu" class="ql-icon ql-4" target="_blank">My Campus</a></li>
+      </ul>-->
+     									<?php
+          wp_nav_menu(array(
+											'container' => false,
+											'menu' => __( 'Header Shortcuts Menu', 'textdomain' ),
+											'menu_class' => 'menu align-right',
+											'theme_location' => 'athletics-header-shortcuts',
+											//'items_wrap'      => '<ul id="%1$s header-menu" class="%2$s">%3$s</ul>',
+           'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+           ));
+											?>
       <!-- This should be similar to what is generated when using Wordpress searchform.php -->
-      <form role="search" method="get" class="search-form" action="">
+      <!--<form role="search" method="get" class="search-form" action="">
         <label>
           <input type="search" placeholder="Search" name="s" class="float-right"/>
         </label>
-      </form>
+      </form>-->
+     <div class="large-9 medium-6 columns searchbox">
+      <?php get_sidebar(); ?>
+     </div>
     </div>
   </div>
 <div class="medium-blue-bg show-for-medium">

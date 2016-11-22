@@ -13,6 +13,9 @@ div.nav-links div.nav-next{
     float: right;
     text-align: right;
 }
+div.header-menu-widgets ul.menu li a:hover{
+	background: #ffffff;
+}
 @media only screen and (max-width: 40em) { 
 	div.nav-links div.nav-next , div.nav-links div.nav-previous{
 		width: 100%;
