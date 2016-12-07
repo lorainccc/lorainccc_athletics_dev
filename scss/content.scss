@@ -6,13 +6,6 @@ div.columns.event-list-event-container{
 	padding: 0;
 }
 }
-.columns.calendar {
-    width: 90px;
-    height: 90px;
-    background-image: url(../images/calendaricon_blue.svg);
-    padding: 2rem 1rem;
-    text-align: center;
-}
 div.row hr{
 	   margin: -80px auto 40px;
    height: 25px;
@@ -772,3 +765,7 @@ hr {
 }
 
 div.content-area ul li {margin: 0 0 0 10px;font-size: .8625rem;}
+
+.columns.event-date {
+    padding: 0;
+}

@@ -86,18 +86,36 @@ $whattodisplay = 'lccc-event';
 $location = event_meta_box_get_meta('event_meta_box_event_location');  
 $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 ?>
+	<?php if ( get_edit_post_link() ) : ?>
+   <div class="small-12 medium-12 large-12 columns">
+			<?php
+				edit_post_link(
+					sprintf(
+						/* translators: %s: Name of current post */
+						esc_html__( 'Edit This Event', 'lorainccc' ),
+						the_title( '<span class="screen-reader-text">"', '"</span>', false )
+					),
+					'<span class="edit-link">',
+					'</span>'
+				);
+			?>
+					</div>		
+	<?php endif; ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="small-12 medium-12 large-12 columns">
    <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
     </div>
+	
 	<div class="small-12 medium-2 large-2 columns">
 	<?php
 			echo '<div class="small-12 medium-12 large-12 columns event-date">';
-                           echo '<div class="event-calendar-icon">';
-                            echo '</div>';
-							echo '<p class="stocker-month">'.$eventstartmonth.'</p>';
+   echo '<div class="small-12 medium-12 large-12 columns  calendar">';    
+								echo '<div class="event-calendar-icon">';
+        echo '</div>';
+							echo '<p class="athletics-month">'.$eventstartmonth.'</p>';
 							echo '<p class="stocker-day">'.$eventstartday.'</p>';
-			echo '</div>';	
+				echo '</div>';			
+		echo '</div>';	
 		?>
  </div>
 	<div class="small-12 medium-10 large-10 columns nopadding">
@@ -115,38 +133,18 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
     	<div class="small-12 medium-12large-12 columns event-image"><?php the_post_thumbnail(); ?>
 <?php
     }?>
-	<div class="small-12 medium-12large-12 columns content-container">
+	<div class="small-12 medium-12large-12 columns content-container nopadding">
 	<div class="entry-content">
         <div class="small-12 medium-12large-12 columns nopadding">
 		<?php
 			the_content();
 ?>
         </div>
-        <div class="small-12 medium-4 large-4 columns">
+        <div class="small-12 medium-12 large-12 columns nopadding">
        <?php echo '<a href="'.get_post_type_archive_link( $whattodisplay ).'">Back To All Events </a>';?>
         </div>
-        <div class="small-12 medium-8 large-8 columns">
-        <?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'lorainccc' ),
-				'after'  => '</div>',
-			) );
-		?>
-        </div>
+      
 	</div><!-- .entry-content -->
 	</div>
-	<?php if ( get_edit_post_link() ) : ?>
 
-			<?php
-				edit_post_link(
-					sprintf(
-						/* translators: %s: Name of current post */
-						esc_html__( 'Edit %s', 'lorainccc' ),
-						the_title( '<span class="screen-reader-text">"', '"</span>', false )
-					),
-					'<span class="edit-link">',
-					'</span>'
-				);
-			?>
-	<?php endif; ?>
 </article><!-- #post-## -->
