@@ -33,13 +33,12 @@ div.columns.event-date p.athletics-day{margin-top:-0.9rem;text-align:center;colo
 a{font-family:'Open Sans',sans-serif}a:hover{text-decoration:underline}
 p.roster-name{font-size:1rem;font-family:'Raleway',sans-serif}p.table-section-header{text-align:left;font-weight:bold;color:#0c3b78}
 .sidebar-menu-header h3{text-transform:uppercase;font-size:1.125rem;font-weight:700;margin-bottom:0}
-.columns.sidebar-menu-header h3{color:#fff}@media screen and (max-width:39.9375em){h1{font-size:1.35rem;line-height:105%}
-}/*!
+.columns.sidebar-menu-header h3{color:#fff}/*!
 Section 1: Foundation
 *//*!
 Section 2: Content
-*/@media only screen and (min-width:40em){div.columns.event-list-event-container{padding:0}
-}div.row hr{margin:-80px auto 40px;height:25px;padding:10px 0;width:100%}table.roster-table tbody{border-right:1px solid #CCC;border-left:1px solid #CCC;border-bottom:1px solid #CCC}
+*/div.row hr{margin:-80px auto 40px;height:25px;padding:10px 0;width:100%}
+table.roster-table tbody{border-right:1px solid #CCC;border-left:1px solid #CCC;border-bottom:1px solid #CCC}
 table.roster-table thead tr th{border-right:1px solid #888;text-align:center;color:#fff}
 table.roster-table thead tr{background:#0c3b78;border:1px solid}table.roster-table tbody tr td{text-align:center}
 table.roster-table thead tr th:last-child{border-right:0}table.roster-table tbody tr.section-header{background:#fff;border-bottom:1px solid #CCC;border-top:1px solid #CCC}
@@ -57,18 +56,14 @@ h1.entry-title{line-height:110%;margin-top:.25rem;font-size:2.1875rem}.event-dat
 #home-news h2.headertext{margin:0}.home-hero{width:100%;background-image:url(/wp-content/themes/lorainccc/images/lccc_diningbookstore.jpg);background-position:center center;background-repeat:no-repeat;background-attachment:scroll;background-size:cover;height:450px}
 .hero-image{width:100%;background-position:center center;background-repeat:no-repeat;background-attachment:scroll;background-size:cover}
 .gateway{background-image:url(/wp-content/themes/lorainccc/images/lccc_diningbookstore.jpg)}
-@media screen and (max-width:39.9375em){.white-panel{margin-top:3rem}}.white-panel{padding:2rem 2rem 4rem 2rem;background:rgba(255,255,255,0.9)}
-.orbit-bullets button{height:.5rem;width:.5rem}.orbit-bullets button.is-active{background:#0c3b78}
-.orbit-slide h2{font-size:2.1875rem;color:#0c3b78;line-height:100%}.orbit-slide p{font-size:.75rem}
-.cta-icons{width:100%;background-color:#0055a5;border-width:5px 0;border-style:solid;border-color:#ffc600}
+.white-panel{padding:2rem 2rem 4rem 2rem;background:rgba(255,255,255,0.9)}.orbit-bullets button{height:.5rem;width:.5rem}
+.orbit-bullets button.is-active{background:#0c3b78}.orbit-slide h2{font-size:2.1875rem;color:#0c3b78;line-height:100%}
+.orbit-slide p{font-size:.75rem}.cta-icons{width:100%;background-color:#0055a5;border-width:5px 0;border-style:solid;border-color:#ffc600}
 .cta-icons .icon-label{font-weight:500;color:#fefefe;font-size:1.125rem;margin-top:1rem}
 .cta-icons .row{background-image:url(/wp-content/themes/lorainccc/images/logo_xl_lccc_blue.png);background-position:center center;background-repeat:no-repeat;background-attachment:scroll;background-size:cover;padding:15px 0}
-.cta-icons .row .columns{padding:1.75rem 0}@media screen and (max-width:39.9375em){.cta-icons{margin-bottom:2rem}
-}.yellow-icon{width:100px;height:100px;border-radius:50%;background-color:#ffc600;transition:background-color .25s ease-out,color .25s ease-out;position:relative}
+.cta-icons .row .columns{padding:1.75rem 0}.yellow-icon{width:100px;height:100px;border-radius:50%;background-color:#ffc600;transition:background-color .25s ease-out,color .25s ease-out;position:relative}
 .yellow-icon img{position:absolute;top:0;bottom:0;left:0;right:0;margin:auto}.yellow-icon:hover{background-color:smart-scale(#ffc600,10%,25%)}
-.service-box{margin-top:3rem}@media screen and (min-width:40em){.service-box-copy{padding-left:0}
-.service-box-image{padding-right:0}.service-box .button{position:absolute;bottom:1rem;left:63.5px}
-.service-box-container{height:100%}}.service-box-header h2{text-transform:uppercase;font-weight:700;color:#fefefe;font-size:.6875rem;background:#0c3b78;line-height:170%;padding:1rem 0;margin-bottom:0;margin-top:0}
+.service-box{margin-top:3rem}.service-box-header h2{text-transform:uppercase;font-weight:700;color:#fefefe;font-size:.6875rem;background:#0c3b78;line-height:170%;padding:1rem 0;margin-bottom:0;margin-top:0}
 .service-box-header h2 span{display:block;font-size:1.5625rem;color:#ffc600;text-transform:capitalize}
 .service-box-container{box-shadow:inset 0 0 10px #dcdcdc}.service-box-copy{position:relative;padding:0}
 .service-box-body{font-size:.75rem;padding:2rem 1rem}.yellow-bottom-border{width:97%;height:5px;background:#ffc600;float:left;margin-left:.9375rem}
@@ -102,8 +97,7 @@ hr{border:0;height:20px;width:90%;height:50px;padding:2rem 0;box-shadow:0 15px 1
 .row .row.lccc-badge{padding-top:1.25rem;padding-bottom:1.25rem;font-size:.75rem;color:#fefefe;margin:1rem 0 0 0}
 .row .row.lccc-badge h3{font-weight:600;font-size:1.25rem;color:#fefefe;margin-bottom:.25rem}
 .row .row.lccc-badge .icon{margin-top:.5rem}.crumbs{padding-top:2rem;padding-bottom:2rem;font-size:.8125rem}
-@media screen and (min-width:40em){aside.columns{padding-right:0;padding-left:0}.gateway-main,.home-left{padding-right:5rem}
-.main-right{padding-left:5rem}}.callout-link{color:#0055a5;text-transform:uppercase;font-size:1.25rem;font-weight:800;margin-bottom:2rem;margin-top:2rem;line-height:100%}
+.callout-link{color:#0055a5;text-transform:uppercase;font-size:1.25rem;font-weight:800;margin-bottom:2rem;margin-top:2rem;line-height:100%}
 .callout-link img{display:inline-block;margin-right:.5rem}.callout-link a,.callout-link span{color:#5593db}
 .video-container{margin-bottom:2rem;position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden}
 .video-container iframe,.video-container object,.video-container embed{position:absolute;top:0;left:0;width:100%;height:100%}
@@ -138,13 +132,10 @@ td.gsc-clear-button{display:none}table.gsc-search-box tbody{background:transpare
 Section 5: Navigation
 */div.nav-links div.nav-previous{width:50%;display:block;float:left;text-align:left}
 div.nav-links div.nav-next{width:50%;display:block;float:right;text-align:right}div.header-menu-widgets ul.menu li a:hover{background:#fff}
-@media only screen and (max-width:40em){div.nav-links div.nav-next,div.nav-links div.nav-previous{width:100%;padding-bottom:1rem}
-}.main-navigation li{box-shadow:none;position:relative;min-height:40px;padding-left:.5rem;padding-top:.3rem}
+.main-navigation li{box-shadow:none;position:relative;min-height:40px;padding-left:.5rem;padding-top:.3rem}
 .main-navigation .nav-menu>ul>li:first-child,.main-navigation .nav-menu>li:first-child{border-top:0}
-@media screen and (max-width:40em){header{padding-top:1.5rem}}@media screen and (min-width:1074px){nav.menu-centered{height:36px}
-}header nav a,header nav a:hover{color:#fefefe;font-size:.875rem;font-weight:600}
-.nav-menu a{font-size:.875rem}header ul#header-menu li a{font-size:.78125rem;color:#0055a5;font-weight:700}
-header .menu:not(#header-menu):not(.vertical) li:hover,header .dropdown.menu .submenu{background:#0c3b78;border:0}
+header nav a,header nav a:hover{color:#fefefe;font-size:.875rem;font-weight:600}.nav-menu a{font-size:.875rem}
+header ul#header-menu li a{font-size:.78125rem;color:#0055a5;font-weight:700}header .menu:not(#header-menu):not(.vertical) li:hover,header .dropdown.menu .submenu{background:#0c3b78;border:0}
 header li.is-submenu-item{padding:.5rem 0;border-top:1px solid #0055a5}header .submenu{margin-top:-1px}
 header .submenu li{text-align:left}header .dropdown.menu .submenu li:hover{background:#fefefe !important;border-top:1px solid #0055a5 !important}
 header .dropdown.menu .submenu li:hover a{color:#0c3b78}header li.is-submenu-item:not(.is-drilldown-submenu-item) a{color:#fefefe;font-size:.85rem}
@@ -182,8 +173,7 @@ ul.nav-menu li.current-menu-item ul.sub-menu{display:block}.main-navigation ul .
 .dropdown-toggle:after{font-size:16px;line-height:24px;width:24px}.main-navigation ul ul{margin-left:1em;border-top:0;border-bottom:0;display:none}
 .clear:before,.clear:after,.site:before,.site:after,.entry-content:before,.entry-content:after,.comment-content:before,.comment-content:after,.site-content:before,.site-content:after,.nav-links:before,.nav-links:after,.comment-navigation:before,.comment-navigation:after,.social-navigation ul:before,.social-navigation ul:after,.textwidget:before,.textwidget:after{content:"";display:table}
 .clear:after,.site:after,.entry-content:after,.comment-content:after,.site-content:after,.nav-links:after,.comment-navigation:after,.social-navigation ul:after,.textwidget:after{clear:both}
-ul.sub-menu{padding-top:15px}/*! Ryan's Updated Menu Styling */@media screen and (min-width:40em){aside.columns{padding-right:.9375rem !important;padding-left:.9375rem !important}
-}.breadcrumb-container{padding:2rem .9375rem !important;font-size:.8125rem !important}
+ul.sub-menu{padding-top:15px}/*! Ryan's Updated Menu Styling */.breadcrumb-container{padding:2rem .9375rem !important;font-size:.8125rem !important}
 .sidebar-widget{padding-top:0 !important;margin:1rem 0 3rem 0 !important}header.entry-header{padding-top:0 !important}
 .main-navigation ul:not(.sub-menu)>li{border:1px solid #dcdcdc !important;box-shadow:inset 0 0 10px #dcdcdc !important;padding:.75rem 2rem .75rem 1rem !important}
 .main-navigation ul:not(.sub-menu)>li>a{font-size:1rem !important;color:#0055a5 !important;font-weight:700 !important}
@@ -199,7 +189,14 @@ footer .menu>li>a{padding:0 .25rem 0 0}footer a,footer p{color:#fefefe;font-size
 footer .footer-logo{margin-bottom:2.5rem}footer ul{list-style:none;margin-left:0}
 footer ul li{margin-bottom:.75rem}footer .underline>li>a:hover{text-decoration:underline}
 footer a.underline:hover{text-decoration:underline}.footer-sm-links{margin-bottom:2rem}
-.mobile-app-link img{margin-right:.75rem}@media screen and (min-width:40em){.mobile-app-link img,.mobile-app-link h2{float:left}
-}@media screen and (max-width:39.9375em){.footer-sm-links{width:210px;margin:0 auto 1rem auto}
+.mobile-app-link img{margin-right:.75rem}@media only screen and (min-width:40em){div.columns.event-list-event-container{padding:0}
+}@media screen and (min-width:40em){.service-box-copy{padding-left:0}.service-box-image{padding-right:0}
+.service-box .button{position:absolute;bottom:1rem;left:63.5px}.service-box-container{height:100%}
+aside.columns{padding-right:0;padding-left:0}.gateway-main,.home-left{padding-right:5rem}
+.main-right{padding-left:5rem}aside.columns{padding-right:.9375rem !important;padding-left:.9375rem !important}
+.mobile-app-link img,.mobile-app-link h2{float:left}}@media screen and (min-width:1074px){nav.menu-centered{height:36px}
+}@media only screen and (max-width:40em){div.nav-links div.nav-next,div.nav-links div.nav-previous{width:100%;padding-bottom:1rem}
+}@media screen and (max-width:40em){header{padding-top:1.5rem}}@media screen and (max-width:39.9375em){h1{font-size:1.35rem;line-height:105%}
+.white-panel{margin-top:3rem}.cta-icons{margin-bottom:2rem}.footer-sm-links{width:210px;margin:0 auto 1rem auto}
 .footer-sm-links li a{padding:0}.footer-sm-links li a img{margin:0 .25rem}footer .row .columns{border-bottom:1px solid #5593db;padding:2rem 0 1rem 0}
 footer{padding-bottom:0}}
