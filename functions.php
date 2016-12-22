@@ -51,13 +51,14 @@ function lorainccc_setup() {
 		'footer-campus-location-nav' => esc_html__( 'Footer Campus Locations', 'lorainccc' ),
 		'header-shortcuts' => esc_html__( 'Header Shortcuts Menu', 'lorainccc' ),
 		'mobile-header-shortcuts' => esc_html__( 'Mobile Header Shortcuts Menu', 'lorainccc' ),
- 		'left-nav' => esc_html__( 'Left Nav', 'lorainccc' ),
+ 	'left-nav' => esc_html__( 'Left Nav', 'lorainccc' ),
 		'lccc-club-sports-left-nav' => esc_html__( 'Club Sports Left Nav', 'lorainccc' ),
 		'inside-athletics-left-nav' => esc_html__( 'Inside Athletics Left Nav', 'lorainccc' ),
 		'varsity-sports-left-nav' => esc_html__( 'Varsity Sports Left Nav', 'lorainccc' ),
 		'athletics-footer-quicklink-nav' => esc_html__( 'Athletics Footer Quicklink Nav', 'lorainccc' ),
 		'athletics-left-nav' => esc_html__( 'Athletics Left Nav', 'lorainccc' ),
 		'athletics-header-shortcuts' => esc_html__( 'Athletics Header Shortcuts', 'lorainccc' ),
+  'athletics-mobile-primary' => esc_html__( 'Athletics Mobile Primary Menu', 'lorainccc' ),
 	) );
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -106,7 +107,7 @@ function lorainccc_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
-	) );		
+	) );
 			register_sidebar( array(
 		'name'          => esc_html__( 'Badges Sidebar', 'lorainccc' ),
 		'id'            => 'badges-sidebar',
@@ -133,7 +134,7 @@ function lorainccc_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
-	) );		
+	) );
 			register_sidebar( array(
 		'name'          => esc_html__( 'Sub Page Events Sidebar', 'lorainccc' ),
 		'id'            => 'sub-events-sidebar',
@@ -142,7 +143,7 @@ function lorainccc_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
-	) );		
+	) );
 		register_sidebar( array(
 		'name'          => esc_html__( 'Athletics Slider Sidebar', 'lorainccc' ),
 		'id'            => 'athletics-slider-sidebar',
@@ -190,17 +191,17 @@ function lorainccc_foundation_scripts() {
 	wp_enqueue_script( 'foundation-init-js', get_template_directory_uri() . '/foundation.js', array( 'jquery' ), '1', true );
 
 	wp_enqueue_script( 'lorainccc-function-script', get_stylesheet_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150330', true );
-	
+
 wp_localize_script( 'lorainccc-function-script', 'screenReaderText', array(
 		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'twentyfifteen' ) . '</span>',
 		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'twentyfifteen' ) . '</span>',
 	) );
-	
+
 }
 add_action( 'wp_enqueue_scripts', 'lorainccc_foundation_scripts' );
 
 function lorainccc_scripts() {
-		wp_enqueue_style( 'lccc-athletics-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Raleway:400,400italic,700,700italic', false ); 
+		wp_enqueue_style( 'lccc-athletics-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Raleway:400,400italic,700,700italic', false );
 
 	wp_enqueue_style( 'lorainccc-style', get_stylesheet_uri() );
 
@@ -269,20 +270,20 @@ class lc_drill_menu_walker extends Walker_Nav_Menu
 	/*
 	 * Add vertical menu class
 	 */
-	 
+
 	function start_lvl( &$output, $depth = 0, $args = array() ) {
 		$indent = str_repeat("\t", $depth);
 		$output .= "\n$indent<ul class=\"vertical menu\">\n";
 	}
 }
- 
+
 function lc_drill_menu_fallback($args)
 {
 	/*
 	 * Instantiate new Page Walker class instead of applying a filter to the
 	 * "wp_page_menu" function in the event there are multiple active menus in theme.
 	 */
-	 
+
 	$walker_page = new Walker_Page();
 	$fallback = $walker_page->walk(get_pages(), 0);
 	$fallback = str_replace("children", "children vertical menu", $fallback);
@@ -291,7 +292,7 @@ function lc_drill_menu_fallback($args)
 
 /* End Menu Functions */
 // CHANGE EXCERPT LENGTH FOR DIFFERENT POST TYPES
- 
+
 function custom_excerpt_length($length) {
     global $post;
     if ($post->post_type == 'lccc_event')
@@ -320,12 +321,12 @@ function create_athletic_category_hierarchical_taxonomy() {
     'all_items' => __( 'All Athletic Categories' ),
     'parent_item' => __( 'Parent Athletic Category' ),
     'parent_item_colon' => __( 'Parent Athletic Category:' ),
-    'edit_item' => __( 'Edit Athletic Category' ), 
+    'edit_item' => __( 'Edit Athletic Category' ),
     'update_item' => __( 'Update Athletic Category' ),
     'add_new_item' => __( 'Add New Athletic Category' ),
     'new_item_name' => __( 'New Athletic Category Name' ),
     'menu_name' => __( 'Athletic Categories' ),
-  ); 	
+  );
 
 // Now register the taxonomy
 
@@ -348,13 +349,13 @@ function create_athletic_category_hierarchical_taxonomy() {
 
 function lccc_athletic_cpt_add_taxonomy_filters() {
 	global $typenow;
- 
+
 	// an array of all the taxonomyies you want to display. Use the taxonomy name or slug
 	$taxonomies = array('athletic_category');
- 
+
 	// must set this to the post type you want the filter(s) displayed on
 	if( $typenow == 'lccc_announcement' ){
- 
+
 		foreach ($taxonomies as $tax_slug) {
 			$tax_obj = get_taxonomy($tax_slug);
 			$tax_name = $tax_obj->labels->name;
@@ -362,8 +363,8 @@ function lccc_athletic_cpt_add_taxonomy_filters() {
 			if(count($terms) > 0) {
 				echo "<select name='$tax_slug' id='$tax_slug' class='postform'>";
 				echo "<option value=''>Show All $tax_name</option>";
-				foreach ($terms as $term) { 
-					echo '<option value='. $term->slug, $_GET[$tax_slug] == $term->slug ? ' selected="selected"' : '','>' . $term->name .' (' . $term->count .')</option>'; 
+				foreach ($terms as $term) {
+					echo '<option value='. $term->slug, $_GET[$tax_slug] == $term->slug ? ' selected="selected"' : '','>' . $term->name .' (' . $term->count .')</option>';
 				}
 				echo "</select>";
 			}

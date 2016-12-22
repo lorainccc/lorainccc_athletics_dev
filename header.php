@@ -35,12 +35,6 @@
 		  <div class="row show-for-medium">
     <div class="large-6 medium-6 columns"><a href="<?php echo esc_url( home_url( '' ) ); ?>"><img src="https://test.lorainccc.edu/athletics/wp-content/uploads/sites/21/2016/07/Commodores-Athletics-web-logo.png" height="92" width="400" alt="Lorain County Community College Logo" /></a>  </div>
     <div class="large-6 medium-6 columns header-menu-widgets">
-<!--      <ul id="header-menu" class="menu align-right">
-        <li><a href="#" class="ql-icon ql-1">A-Z Index</a></li>
-        <li><a href="/faculty-and-staff/" class="ql-icon ql-2">Faculty/Staff</a></li>
-        <li><a href="https://canvas.lorainccc.edu" class="ql-icon ql-3" target="_blank">Canvas</a></li>
-        <li><a href="https://mycampus.lorainccc.edu" class="ql-icon ql-4" target="_blank">My Campus</a></li>
-      </ul>-->
      									<?php
           wp_nav_menu(array(
 											'container' => false,
@@ -83,7 +77,7 @@
     </div>
   </div>
   <div class="row show-for-small-only mobile-nav-bar">
-    <div class="small-8 columns"> <a href="/athletics"><img src="https://test.lorainccc.edu/athletics/wp-content/uploads/sites/42/2016/07/Commodores-Athletics-web-logo.png" alt="" width="165" height="31.875" /></a> </div>
+    <div class="small-8 columns"> <a href="/athletics"><img src="/athletics/wp-content/themes/lorainccc_athletics/images/lccc-commodore-logo-white.png" alt="" width="165" height="31.875" /></a> </div>
     <div class="small-2 columns clearfix"> <span data-responsive-toggle="mobile-search" data-hide-for="medium"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/magnifying-glass.svg" height="25" width="25" alt="" class="float-right" data-toggle/></span> </div>
     <div class="small-2 columns"> <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
       <button class="menu-icon" type="button" data-toggle></button>
@@ -107,7 +101,7 @@
 													'container' => false,
 													'menu' => __( 'Drill Menu', 'textdomain' ),
 													'menu_class' => 'vertical menu',
-													'theme_location' => 'mobile-primary',
+													'theme_location' => 'athletics-mobile-primary',
 													'menu_id' => 'mobile-primary-menu',
 														//Recommend setting this to false, but if you need a fallback...
 													'fallback_cb' => 'lc_drill_menu_fallback',
