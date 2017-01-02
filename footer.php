@@ -20,7 +20,13 @@
       <a href="#" target="_blank" class="clearfix mobile-app-link"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/smartphone_yellow.svg" heigth="33" width="20" alt=""/>
       <h2>LCCC'S<br />
         Mobile App</h2>
-      </a> </div>
+      </a>
+     <?php if($_GET['siteurl'] == ''){ ?>
+     <p class="website-feedback">
+      <a href="/website-feedback?siteurl=<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>" title="Provide Feedback about this Page" target="_blank">Feedback about this page</a>
+     </p>
+     <?php } ?>
+     </div>
 					<?php 
 					$footer_contact_email = get_option( 'lccc_footer_email', '' );
 					$footer_contact_phone = get_option( 'lccc_footer_phone', '' );
