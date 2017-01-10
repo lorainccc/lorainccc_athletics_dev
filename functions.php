@@ -378,4 +378,24 @@ function sb_add_tax_to_api() {
     $mytax->show_in_rest = true;
 }
 add_action( 'init', 'sb_add_tax_to_api', 30 );
+
+
+$new_athletics_setting = new new_athletics_setting();
+
+class new_athletics_setting {
+    function new_athletics_setting( ) {
+        add_filter( 'admin_init' , array( &$this , 'register_fields' ) );
+    }
+    function register_fields() {
+        register_setting( 'general', 'athletics_announcement_feed_count', 'esc_attr' );
+							 add_settings_section( 'lccc-athletics-settings', 'LCCC Athletic Announcements Feed Settings', '__return_false', 'general' );
+        add_settings_field('lccc_athletics_home_feed_count', '<label for="athletics_announcement_feed_count">'.__('Number of Posts for Athletics home Announcement Feed?' , 'athletics_announcement_feed_count' ).'</label>' , array(&$this, 'fields_html') , 'general', 'lccc-athletics-settings' );
+    }
+    function fields_html() {
+        $value = get_option( 'athletics_announcement_feed_count', '' );
+        echo '<input type="text" id="athletics_announcement_feed_count" name="athletics_announcement_feed_count" value="' . $value . '" />';
+								echo '<p class="description" id="tagline-description">Enter the <strong>number of announcements</strong> you wish to represent in the LCCC Athletics home page feed.</p>';
+    }
+}
+
 ?>

@@ -9,6 +9,12 @@ body {
 {
 	margin-top: 4rem;
 }
+div.columns.view-all-athletics-button{
+	box-shadow: none; 
+}
+div.columns.view-all-athletics-button a.button{
+	float: left; 
+}
 .dropdown-toggle:after {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;

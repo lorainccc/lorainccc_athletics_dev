@@ -29,9 +29,96 @@ get_header();
 			<section class="row">
 				<div class="small-12 medium-12 large-12 columns">
 										<div class="small-12 medium-7 large-8 columns athletics-news">
-												<?php if ( is_active_sidebar( 'lccc-announcements-sidebar' ) ) { ?>
-																<?php dynamic_sidebar( 'lccc-announcements-sidebar' ); ?>
-												<?php } ?>
+												<?php 
+																$i=0;
+																if(get_option( 'athletics_announcement_feed_count', '' ) != ''){
+																	$announcment_count =get_option( 'athletics_announcement_feed_count', '' );
+																}else{
+																	$announcment_count = 5;
+																}
+																$announcment_count =get_option( 'athletics_announcement_feed_count', '' );
+																$announcementargs=array(
+																'post_type' => 'lccc_announcement',
+																'post_status' => 'publish',
+																'athletic_category'	=> 'athletics-news',
+																'orderby' => 'date',
+																'order' => 'DESC',
+																'posts_per_page' => $announcment_count,
+																);
+																$newevents = new WP_Query($announcementargs);
+																if ( $newevents->have_posts() ) :
+																			echo '<div class="small-12 medium-12 large-12 columns lccc_announcement_header">';
+																		echo '<h2 class="announcementheader">'.'In The News'.'</h2>';
+																		echo '</div>';	
+																  echo '<div class="small-12 medium-12 large-12 columns news-container">';
+																		while ( $newevents->have_posts() ) : $newevents->the_post();
+																		//$i++;
+																		$altlink = announcement_meta_box_get_meta('announcement_meta_box_altlink');
+																		  echo '<div class="small-12 medium-12 large-12 columns news-container">';
+																					if ( has_post_thumbnail() ) {
+																							echo '<div class="small-12 medium-3 large-3 columns eventhumbnail">';
+																								if( $altlink != ''){
+																									 echo '<a href="'.$altlink.'">'.the_post_thumbnail().'</a>';
+																								}else{
+																									the_post_thumbnail();
+																								}
+																						
+																						echo '</div>';
+																							echo '<div class="small-12 medium-9 large-9 columns">';
+																				if( $altlink != ''){
+																									 echo '<a href="'.$altlink.'">'.the_title('<h3 class="eventtitle">','</h3>').'</a>';
+																								}else{
+																								?>
+																										<a href="<?php the_permalink();?>"><?php the_title('<h3 class="eventtitle">','</h3>');?></a>
+																						<?php
+																						}
+																						the_content('<p>','</p>');
+																												if( $altlink != ''){
+																							?>
+																						<a class="button" href="<?php echo $altlink; ?>">More Information</a>
+																							<?php
+																						}else{
+																							?>
+																						<a class="button" href="<?php the_permalink(); ?>">More Information</a>
+																						
+																							<?php	
+																						}
+																						echo '</div>';
+																					}else{
+																							echo '<div class="small-12 medium-12 large-12 columns">';
+																								if( $altlink != ''){
+																									?>
+																									 <a href="<?php echo $altlink;?>"><?php the_title('<h3 class="eventtitle">','</h3>');?></a>
+																								<?php
+																								}else{
+																									?>
+																								<a href="<?php the_permalink();?>"><?php the_title('<h3 class="eventtitle">','</h3>');?></a>
+																									<?php
+																								}
+																						the_content('<p>','</p>');
+																						if( $altlink != ''){
+																							?>
+											<a class="button" href="<?php echo $altlink; ?>">More Information</a>											
+																							<?php
+																						}else{
+																							?>
+											<a class="button" href="<?php the_permalink(); ?>">More Information</a>											
+											
+																							<?php	
+																						}
+																							echo '</div>';
+																					}
+														  			echo '<div class="column row">';
+																				echo '<hr />';
+																			echo '</div>';
+																					echo '</div>';
+																		endwhile;
+																		    echo '<div class="small-12 medium-12 large-12 columns view-all-athletics-button">';
+							echo '<a href="/athletics/lccc_announcement/" class="button">View All Athletic News</a>';
+		     echo '</div>';
+																		echo '</div>';
+																endif;
+												?>
 										</div>
 										<div class="small-12 medium-5 large-4 columns">
 																<div class="small-12 medium-12 large-12 columns nopadding">
