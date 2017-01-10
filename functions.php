@@ -373,4 +373,9 @@ function lccc_athletic_cpt_add_taxonomy_filters() {
 }
 add_action( 'restrict_manage_posts', 'lccc_athletic_cpt_add_taxonomy_filters' );
 
+function sb_add_tax_to_api() {
+    $mytax = get_taxonomy( 'athletic_category' );
+    $mytax->show_in_rest = true;
+}
+add_action( 'init', 'sb_add_tax_to_api', 30 );
 ?>
