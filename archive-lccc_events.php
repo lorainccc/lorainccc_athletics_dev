@@ -43,7 +43,7 @@ get_header(); ?>
 <h3><?php echo bloginfo('the-title'); ?></h3>
 		</div>
 	<?php	if ( has_nav_menu( 'left-nav' ) ) : ?>
-	<div id="secondary" class="secondary">
+	<div id="secondary" class="small-12 medium-12 large-12 columns secondary nopadding">
 		<?php if ( has_nav_menu( 'left-nav' ) ) : ?>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php
@@ -63,7 +63,7 @@ get_header(); ?>
 	<div class="small-12 medium-8 large-8 columns nopadding">		
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-            <div class="small-12 medium-12 large-12 columns">
+   <div class="small-12 medium-12 large-12 columns">
 				<header class="page-header">
 				<h1 class="page-title"> Events</h1>
 			</header><!-- .page-header -->
@@ -80,16 +80,17 @@ get_header(); ?>
 							endwhile;
 					endif;
 			?>
-           <div class="column row event-list-row">
+					
+		</div>
+  <div class="small-12 medium-12 large-12 columns archive-events-container">
+  <div class="column row event-list-row">
             <hr>
             </div> 
-		</div>
-             <div class="small-12 medium-12 large-12 columns archive-events-container">
-                <?php 
+														<?php 
 		$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
                  $eventargs=array(
                     'post_type' => 'lccc_events',
-		    'posts_per_page' => 5,
+		    'posts_per_page' => 10,
 		    'order'=> 'ASC',
     		    'orderby'=> 'meta_value',
 		    'paged' => $paged,
@@ -139,7 +140,7 @@ get_header(); ?>
 			<div class="taxonomies">
 				<?php echo get_the_term_list( $post->ID, 'event_categories','', ' , ' , ''); ?>
 			</div>
-			<p><?php echo 'Date: '.$eventstartmonthfull.' '.$eventstartday.' , '.$eventstartyear; ?></p>
+			<p><?php echo 'Date: '.$eventstartmonthfull.' '.$eventstartday.', '.$eventstartyear; ?></p>
         		<p><?php echo 'Time: '.$starttime; ?></p>
           		<p><?php echo 'Location: '.$location; ?></p>
         		<p><?php echo 'Cost: '.$cost; ?></p>

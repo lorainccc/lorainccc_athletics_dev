@@ -45,16 +45,16 @@ $whattodisplay = 'lccc-event';
 		
 
 										$starttimevar=strtotime($starteventtime);
-										$starttime=	date("h:i a",$starttimevar);
+										$starttime=	date("g:i a",$starttimevar);
 										$starteventtimehours = date("G",$starttimevar);
 										$starteventtimeminutes = date("i",$starttimevar);
 		
           $startdate=strtotime($starteventdate);
 										$eventstartdate=date("Y-m-d",$startdate);
 										$eventstartmonth=date("M",$startdate);
-                                        $eventstartmonthfull=date("F",$startdate);
+          $eventstartmonthfull=date("F",$startdate);
 										$eventstartday =date("j",$startdate);
-                                        $eventstartyear =date("Y",$startdate);
+          $eventstartyear =date("Y",$startdate);
 										
 										$endeventtimevar=strtotime($endtime);
 										$endeventtime = date("h:i a",$endeventtimevar);
@@ -121,7 +121,7 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 	<div class="small-12 medium-10 large-10 columns nopadding">
 	<header class="entry-header">
         <?php the_category( ', ' ); ?>
-        <p><?php echo 'Date: '.$eventstartmonthfull.', '.$eventstartday.' '.$eventstartyear; ?></p>
+        <p><?php echo 'Date: '.$eventstartmonthfull.' '.$eventstartday.', '.$eventstartyear; ?></p>
         <p><?php echo 'Time: '.$starttime; ?></p>
           <p><?php echo 'Location: '.$location; ?></p>
         <p><?php echo 'Cost: '.$cost; ?></p>
@@ -141,7 +141,7 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 ?>
         </div>
         <div class="small-12 medium-12 large-12 columns nopadding">
-       <?php echo '<a href="'.get_post_type_archive_link( $whattodisplay ).'">Back To All Events </a>';?>
+       <?php echo '<a href="/athletics/lccc_events">Back To All Events </a>';?>
         </div>
       
 	</div><!-- .entry-content -->
