@@ -16,7 +16,9 @@
 		<?php
     if ( has_post_thumbnail() ) {
     ?>
-	<div class="small-12 medium-12large-12 columns event-image"><?php the_post_thumbnail(); ?></div>
+		<div class="grid-container">
+	<div class="small-12 medium-12large-12 cell event-image"><?php the_post_thumbnail(); ?></div>
+</div>
 <?php
     }?>
 		<?php the_content(); ?>

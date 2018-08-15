@@ -9,9 +9,10 @@
 ?>
 	</div><!-- #content -->
 
-	<footer id="colophon" class="small-12 medium-12 large-12 columns site-footer" role="contentinfo">
-		  <div class="row text-center medium-text-left">
-    <div class="large-4 medium-4 columns"><a href="http://www.lorainccc.edu/"><img class="footer-logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/lccclogo_white.svg" alt="" width="220" height="42.5"/></a>
+	<footer id="colophon" class="small-12 medium-12 large-12 site-footer" role="contentinfo">
+		<div class="grid-container">
+		  <div class="grid-x grid-margin-x text-center medium-text-left">
+    <div class="large-4 medium-4 cell"><a href="http://www.lorainccc.edu/"><img class="footer-logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/lccclogo_white.svg" alt="" width="220" height="42.5"/></a>
       <h2>Connect with LCCC</h2>
       <ul class="menu footer-sm-links">
         <li><a href="https://www.facebook.com/LCCCAthletics" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/facebook_white.svg" height="30" width="30" alt="" /></a></li>
@@ -31,7 +32,7 @@
 					$footer_contact_email = get_option( 'lccc_footer_email', '' );
 					$footer_contact_phone = get_option( 'lccc_footer_phone', '' );
 					?>
-    <div class="large-4 medium-4 columns">
+    <div class="large-4 medium-4 cell">
       <h2>Contact Athletics</h2>
    <p>1005 N Abbe Rd<br>
         Elyria, OH 44035<br>
@@ -52,7 +53,7 @@
         <li><a href="/about/map-and-directions-to-lccc/">Map and Directions</a></li>
       </ul>
     </div>
-    <div class="large-4 medium-4 columns">
+    <div class="large-4 medium-4 cell">
       <h2>Quick Links</h2>
 	<?php if ( has_nav_menu( 'athletics-footer-quicklink-nav' ) ) : ?>
 		<nav id="site-navigation" class="footer-navigation" role="navigation">
@@ -68,6 +69,7 @@
     </div>
 
   </div>
+</div>
 </footer><!-- #colophon -->
 </div><!-- #page -->
 

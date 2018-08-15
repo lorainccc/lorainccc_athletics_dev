@@ -29,8 +29,9 @@
 		<?php
     if ( has_post_thumbnail() ) {
     ?>
-	<div class="small-12 medium-4 large-4 columns event-image"><?php the_post_thumbnail(); ?></div>
-		<div class="small-12 medium-4 large-4 columns post-content"> 
+		<div class="grid-container">
+	<div class="small-12 medium-4 large-4 cell event-image"><?php the_post_thumbnail(); ?></div>
+		<div class="small-12 medium-4 large-4 cell post-content">
 					<?php
 											the_content( sprintf(
 									/* translators: %s: Name of current post. */
@@ -46,7 +47,7 @@
 		</div>
 <?php
     }else{?>
-		<div class="small-12 medium-12 large-12 columns post-content">
+		<div class="small-12 medium-12 large-12 cell post-content">
 		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
@@ -59,11 +60,12 @@
 				'after'  => '</div>',
 			) );
 				?>
-		
+
 				<?php
 				}
 		?>
 		</div>
+	</div>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">

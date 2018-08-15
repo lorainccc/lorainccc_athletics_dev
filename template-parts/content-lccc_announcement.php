@@ -7,32 +7,33 @@
  * @package lorainccc
  */
 ?>
-<?php 
+<?php
 $subheading = announcement_meta_box_get_meta('announcement_meta_box_sub_heading');
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <div class="small-12 medium-12 large-12 columns">
+  <div class="grid-container">
+    <div class="small-12 medium-12 large-12 cell">
    				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 							<h3><?php echo $subheading; ?></h3>
     </div>
-	<div class="small-12 medium-12 large-12 columns">
+	<div class="small-12 medium-12 large-12 cell">
 	<header class="entry-header">
-       <?php echo get_the_term_list( $post->ID, 'athletic_category', '', ', ' ); ?> 
+       <?php echo get_the_term_list( $post->ID, 'athletic_category', '', ', ' ); ?>
 	</header><!-- .entry-header -->
 	</div>
  <?php
     if ( has_post_thumbnail() ) {
     ?>
-	<div class="small-12 medium-12large-12 columns event-image"><?php the_post_thumbnail(); ?></div>
+	<div class="small-12 medium-12large-12 cell event-image"><?php the_post_thumbnail(); ?></div>
 <?php
     }?>
-	<div class="small-12 medium-12large-12 columns content-container">
+	<div class="small-12 medium-12large-12 cell content-container">
 	<div class="entry-content">
-        <div class="small-12 medium-12large-12 columns nopadding">
+        <div class="small-12 medium-12large-12 cell nopadding">
 		<?php
 			the_content();
 ?>
-        </div>     
+        </div>
 	</div><!-- .entry-content -->
 	</div>
 	<?php if ( get_edit_post_link() ) : ?>
@@ -49,4 +50,5 @@ $subheading = announcement_meta_box_get_meta('announcement_meta_box_sub_heading'
 				);
 			?>
 	<?php endif; ?>
+</div>
 </article><!-- #post-## -->

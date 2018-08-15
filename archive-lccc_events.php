@@ -8,13 +8,14 @@
  */
 
 get_header(); ?>
-<div class="row page-content">
-    <div class="small-12 medium-12 large-12 columns nopadding show-for-small-only">
-  <div class="row show-for-small-only sub-mobile-menu-row" style="background:#000;">
- <div class="small-2 columns" style="padding-top: 0.5rem;padding-left: 1.625rem;"> <span data-responsive-toggle="sub-responsive-menu" data-hide-for="medium">
+<div class="grid-container">
+<div class="grid-x grid-margin-x page-content">
+    <div class="small-12 medium-12 large-12 cell nopadding show-for-small-only">
+  <div class="grid-x grid-margin-x show-for-small-only sub-mobile-menu-row" style="background:#000;">
+ <div class="small-2 cell" style="padding-top: 0.5rem;padding-left: 1.625rem;"> <span data-responsive-toggle="sub-responsive-menu" data-hide-for="medium">
       <button class="menu-icon" type="button" data-toggle></button>
       </span> </div>
-    <div class="small-10 columns nopadding"><h3 class="sub-mobile-menu-header" style="color:#ffffff;">Events Menu</h3></div>
+    <div class="small-10 cell nopadding"><h3 class="sub-mobile-menu-header" style="color:#ffffff;">Events Menu</h3></div>
   </div>
   <div id="sub-responsive-menu" class="show-for-small-only">
     <ul class="vertical menu" data-drilldown data-parent-link="true">
@@ -34,16 +35,16 @@ get_header(); ?>
     </ul>
   </div>
 </div>
-<div class="small-12 medium-12 large-12 columns breadcrumb-container">
+<div class="small-12 medium-12 large-12 cell breadcrumb-container">
    <?php get_template_part( 'template-parts/content', 'breadcrumb' ); ?> All Events
 </div>
-<div class="medium-4 large-4 columns hide-for-small-only">
-	<div class="small-12 medium-12 large-12 columns sidebar-widget">
-		<div class="small-12 medium-12 large-12 columns sidebar-menu-header">
+<div class="medium-4 large-4 cell hide-for-small-only">
+	<div class="small-12 medium-12 large-12 cell sidebar-widget">
+		<div class="small-12 medium-12 large-12 cell sidebar-menu-header">
 <h3><?php echo bloginfo('the-title'); ?></h3>
 		</div>
 	<?php	if ( has_nav_menu( 'left-nav' ) ) : ?>
-	<div id="secondary" class="small-12 medium-12 large-12 columns secondary nopadding">
+	<div id="secondary" class="small-12 medium-12 large-12 cell secondary nopadding">
 		<?php if ( has_nav_menu( 'left-nav' ) ) : ?>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php
@@ -60,10 +61,10 @@ get_header(); ?>
 
 	</div>
 	</div>
-	<div class="small-12 medium-8 large-8 columns nopadding">		
+	<div class="small-12 medium-8 large-8 cell nopadding">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-   <div class="small-12 medium-12 large-12 columns">
+   <div class="small-12 medium-12 large-12 cell">
 				<header class="page-header">
 				<h1 class="page-title"> Events</h1>
 			</header><!-- .page-header -->
@@ -80,13 +81,13 @@ get_header(); ?>
 							endwhile;
 					endif;
 			?>
-					
+
 		</div>
-  <div class="small-12 medium-12 large-12 columns archive-events-container">
-  <div class="column row event-list-row">
+  <div class="small-12 medium-12 large-12 cell archive-events-container">
+  <div class="cell grid-x grid-margin-x event-list-row">
             <hr>
-            </div> 
-														<?php 
+            </div>
+														<?php
 		$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
                  $eventargs=array(
                     'post_type' => 'lccc_events',
@@ -100,7 +101,7 @@ get_header(); ?>
 					if ( $wp_query->have_posts() ) :
 						while ( $wp_query->have_posts() ) : $wp_query->the_post();
 	$starteventdate = event_meta_box_get_meta('event_start_date');
-		$starteventtime = event_meta_box_get_meta('event_start_time');  
+		$starteventtime = event_meta_box_get_meta('event_start_time');
 		$endeventdate = event_meta_box_get_meta('event_end_date');
 		$endtime = event_meta_box_get_meta('event_end_time');
 		$starttimevar=strtotime($starteventtime);
@@ -119,22 +120,22 @@ get_header(); ?>
 		$endeventtimeminutes = date("i",$endeventtimevar);
 		$enddate=strtotime($endeventdate);
 		$endeventdate = date("Y-m-d",$enddate);
-		$location = event_meta_box_get_meta('event_meta_box_event_location');  
-        	$cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');	
+		$location = event_meta_box_get_meta('event_meta_box_event_location');
+        	$cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 		$key_1_value = get_post_meta( get_the_ID(), 'event_start_date', true );
 			?>
-<div id="post-<?php the_ID(); ?>" class="small-12 medium-12 large-12 columns nopadding">
-			<div class="small-12 medium-12 large-2 columns nopadding">
+<div id="post-<?php the_ID(); ?>" class="small-12 medium-12 large-12 cell nopadding">
+			<div class="small-12 medium-12 large-2 cell nopadding">
 			<?php
-				echo '<div class="small-12 medium-12 large-12 columns event-date">';
-         			echo '<div class="small-12 medium-12 large-12 columns calendar">';                
+				echo '<div class="small-12 medium-12 large-12 cell event-date">';
+         			echo '<div class="small-12 medium-12 large-12 cell calendar">';
 				echo '<p class="stocker-month">'.$eventstartmonth.'</p>';
 				echo '<p class="stocker-day">'.$eventstartday.'</p>';
 				echo '</div>';
-				echo '</div>';	
+				echo '</div>';
 			?>
  			</div>
-			<div class="small-12 medium-12 large-10 columns nopadding">
+			<div class="small-12 medium-12 large-10 cell nopadding">
                         <header class="entry-header">
         <a href="<?php the_permalink();?>"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
 			<div class="taxonomies">
@@ -146,7 +147,7 @@ get_header(); ?>
         		<p><?php echo 'Cost: '.$cost; ?></p>
         		<p>&nbsp;</p>
 			</header>
-			<div class="small-12 medium-12 large-12 columns nopadding">
+			<div class="small-12 medium-12 large-12 cell nopadding">
 				<div class="entry-content">
 					<?php the_excerpt();?>
 					<a class="button" href="<?php the_permalink();?>">More Information</a>
@@ -155,12 +156,12 @@ get_header(); ?>
 			</div>
 </div>
 
-			 <div class="column row event-list-row">
+			 <div class="cell grid-x grid-margin-x event-list-row">
             			<hr>
-            		  </div> 
+            		  </div>
 			 <?php
 			endwhile;
-?> 	
+?>
 <div id="pagination" class="clearfix">
   <div style="float:left;"><?php previous_posts_link( 'Previous Events' ); ?></div>
   <div style="float:right;"><?php next_posts_link( 'More Events', $wp_query->max_num_pages ); ?></div>
@@ -173,8 +174,8 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-</div>	
+</div>
 
 </div>
+</div>
 <?php get_footer(); ?>
-

@@ -8,7 +8,8 @@
  */
 
 ?>
-<article id="post-<?php the_ID(); ?>" class="small-12 medium-12 large-12 columns">
+<div class="grid-container">
+<article id="post-<?php the_ID(); ?>" class="small-12 medium-12 large-12 cell">
 	<header class="entry-header">
 		<?php
 			if ( is_single() ) {
@@ -30,8 +31,8 @@
 		<?php
     if ( has_post_thumbnail() ) {
     ?>
-	<div class="small-12 medium-4 large-4 columns event-image"><?php the_post_thumbnail(); ?></div>
-		<div class="small-12 medium-8 large-8 columns post-content"> 
+	<div class="small-12 medium-4 large-4 cell event-image"><?php the_post_thumbnail(); ?></div>
+		<div class="small-12 medium-8 large-8 cell post-content">
 					<?php
 											the_content( sprintf(
 									/* translators: %s: Name of current post. */
@@ -48,7 +49,7 @@
 <?php
     }else{
 					?>
-					<div class="small-12 medium-12 large-12 columns post-content"> 
+					<div class="small-12 medium-12 large-12 cell post-content">
 					<?php
 											the_content( sprintf(
 									/* translators: %s: Name of current post. */
@@ -63,8 +64,9 @@
 					?>
 		</div>
 		<?php
-				}		
+				}
 		?>
 	</div><!-- .entry-content -->
 
 </article><!-- #post-## -->
+</div>

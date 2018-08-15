@@ -11,14 +11,14 @@
  */
 
 get_header(); ?>
-
-<div class="row page-content">
-		<div class="small-12 medium-12 large-12 columns nopadding show-for-small-only">
-  <div class="row show-for-small-only sub-mobile-menu-row" style="background:#000;">
- <div class="small-2 columns" style="padding-top: 0.5rem;padding-left: 1.625rem;"> <span data-responsive-toggle="sub-responsive-menu" data-hide-for="medium">
+<div class="grid-container">
+<div class="grid-x grid-margin-x page-content">
+		<div class="small-12 medium-12 large-12 cell nopadding show-for-small-only">
+  <div class="grid-x grid-margin-x show-for-small-only sub-mobile-menu-row" style="background:#000;">
+ <div class="small-2 cell" style="padding-top: 0.5rem;padding-left: 1.625rem;"> <span data-responsive-toggle="sub-responsive-menu" data-hide-for="medium">
       <button class="menu-icon" type="button" data-toggle></button>
       </span> </div>
-    <div class="small-10 columns nopadding"><h3 class="sub-mobile-menu-header" style="color:#ffffff;"><?php single_post_title(); ?> Menu</h3></div>
+    <div class="small-10 cell nopadding"><h3 class="sub-mobile-menu-header" style="color:#ffffff;"><?php single_post_title(); ?> Menu</h3></div>
   </div>
   <div id="sub-responsive-menu" class="show-for-small-only">
     <ul class="vertical menu" data-drilldown data-parent-link="true">
@@ -38,41 +38,41 @@ get_header(); ?>
     </ul>
   </div>
 </div>
-<div class="small-12 medium-12 large-12 columns breadcrumb-container">
+<div class="small-12 medium-12 large-12 cell breadcrumb-container">
    <?php get_template_part( 'template-parts/content', 'breadcrumb' ); ?>
 	</div>
-	
-<div class="medium-4 large-4 columns hide-for-small-only">
-	<div class="small-12 medium-12 large-12 columns sidebar-widget">
-		<div class="small-12 medium-12 large-12 columns sidebar-menu-header">
+
+<div class="medium-4 large-4 cell hide-for-small-only">
+	<div class="small-12 medium-12 large-12 cell sidebar-widget">
+		<div class="small-12 medium-12 large-12 cell sidebar-menu-header">
 	 <h3>
-			<?php 
+			<?php
 							$current = $post->ID;
-							
+
 							$parent = $post->post_parent;
-							
+
 							$parent_post = get_post($parent);
 							$parent_slug = $parent_post->post_name;
-							
+
 							$parent_id = $parent_post->ID;
 
 							$grandparent_id = $parent_post->post_parent;
 
 							$grandparent_post = get_post($grandparent_id);
 							$grandparent_slug = $grandparent_post->post_name;
-							
+
 			?>
     <?php if ($root_parent = get_the_title($grandparent_id) !== $root_parent = get_the_title($current)) {echo get_the_title($grandparent_id); }else {echo get_the_title($parent); }
 			?>
 			</h3>
-		<?php 
+		<?php
 			//echo 'current-> ' . $current . ' slug-> ' . $post->post_name . '<br />';
 			//echo 'parent-> ' . $parent_id . ' slug-> ' . $parent_slug  . '<br />';
 			//echo 'grandparent-> ' . $grandparent_id . ' slug-> ' . $grandparent_slug . '<br />';
 		?>
 		</div>
 	<?php	if ( has_nav_menu( 'left-nav' ) ) : ?>
-	<div id="secondary" class="medium-12 columns secondary nopadding">
+	<div id="secondary" class="medium-12 cell secondary nopadding">
 		<?php if ( has_nav_menu( 'left-nav' ) ) : ?>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php
@@ -90,7 +90,7 @@ get_header(); ?>
 									default:
 											$menuslug = 'left-nav';
 											break;
-									
+
 						}
 			}else{
 							switch($parent_slug) {
@@ -106,8 +106,8 @@ get_header(); ?>
 									default:
 											$menuslug = 'left-nav';
 											break;
-									
-						}				
+
+						}
 			}
 				// Primary navigation menu.
 					wp_nav_menu( array(
@@ -124,7 +124,7 @@ get_header(); ?>
 				<?php } ?>
 	</div>
 	</div>
-	<div class="small-12 medium-8 large-8 columns">		
+	<div class="small-12 medium-8 large-8 cell">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
@@ -135,12 +135,12 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-</div>	
-		<div class="small-12 columns show-for-small-only">
+</div>
+		<div class="small-12 cell show-for-small-only">
 				<?php if ( is_active_sidebar( 'stocker-page-events-sidebar' ) ) { ?>
 							<?php dynamic_sidebar( 'stocker-page-events-sidebar' ); ?>
 				<?php } ?>
 	</div>
 </div>
+</div>
 <?php get_footer(); ?>
-

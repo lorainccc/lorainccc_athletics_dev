@@ -8,13 +8,14 @@
  */
 
 get_header(); ?>
-<div class="row page-content">
-<div class="small-12 medium-12 large-12 columns breadcrumb-container">
+<div class="grid-container">
+<div class="grid-x grid-margin-x page-content">
+<div class="small-12 medium-12 large-12 cell breadcrumb-container">
    <?php get_template_part( 'template-parts/content', 'breadcrumb' ); ?>
 </div>
-<div class="medium-4 large-4 columns hide-for-small-only">
-	<div class="small-12 medium-12 large-12 columns sidebar-widget">
-		<div class="small-12 medium-12 large-12 columns sidebar-menu-header">
+<div class="medium-4 large-4 cell hide-for-small-only">
+	<div class="small-12 medium-12 large-12 cell sidebar-widget">
+		<div class="small-12 medium-12 large-12 cell sidebar-menu-header">
 	<h3><?php echo bloginfo('the-title'); ?></h3>
 		</div>
 	<?php	if ( has_nav_menu( 'left-nav' ) ) : ?>
@@ -35,7 +36,7 @@ get_header(); ?>
 
 	</div>
 	</div>
-	<div class="small-12 medium-8 large-8 columns">		
+	<div class="small-12 medium-8 large-8 cell">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 	<?php if ( have_posts() ) : ?>
@@ -71,7 +72,8 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-</div>	
+</div>
 
+</div>
 </div>
 <?php get_footer(); ?>

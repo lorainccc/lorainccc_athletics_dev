@@ -16,7 +16,7 @@ div.nav-links div.nav-next{
 div.header-menu-widgets ul.menu li a:hover{
 	background: #ffffff;
 }
-@media only screen and (max-width: 40em) { 
+@media only screen and (max-width: 40em) {
 	div.nav-links div.nav-next , div.nav-links div.nav-previous{
 		width: 100%;
 		padding-bottom: 1rem;
@@ -391,7 +391,7 @@ ul.sub-menu {
 /*! Ryan's Updated Menu Styling */
 
 @media screen and (min-width: 40em) {
-   aside.columns {
+   aside.cell {
        padding-right: .9375rem !important;
        padding-left: .9375rem !important;
    }

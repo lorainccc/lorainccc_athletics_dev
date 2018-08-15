@@ -13,7 +13,7 @@ h2{line-height:110%;margin-top:.25rem;font-size:1.625rem;font-family:'Raleway',s
 
 h2.cta-h2{text-transform:uppercase;font-family:'Raleway',sans-serif}
 p {font-weight:500;font-size:1rem;font-family:'Open Sans',sans-serif}
-div.columns.event-date p.athletics-month {
+div.cell.event-date p.athletics-month {
     color: #0c3b78;
     display: block;
     line-height: 100%;
@@ -23,7 +23,7 @@ div.columns.event-date p.athletics-month {
     margin-top: -0.5rem;
 				text-align: center;
 }
-div.columns.event-date p.athletics-day {
+div.cell.event-date p.athletics-day {
     margin-top: -0.9rem;
     text-align: center;
     color: #0c3b78;
@@ -46,9 +46,9 @@ p.table-section-header{text-align: left;font-weight: bold;color: #0C3B78;}
     font-weight: 700;
     margin-bottom: 0;
 }
-.columns.sidebar-menu-header h3 {
+.cell.sidebar-menu-header h3 {
     color: #ffffff;
-} 
+}
 
 h2.announcementheader {
     font-size: 2.2rem;
@@ -57,7 +57,7 @@ h2.announcementheader {
 }
 @media screen and (max-width: 39.9375em) {
 	h1 {
-		font-size: 1.35rem;	
+		font-size: 1.35rem;
 		line-height: 105%;
 	}
 }
@@ -106,7 +106,7 @@ $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
 $hr-border: 1px solid $medium-gray;
-$hr-margin: rem-calc(20) auto;
+// $hr-margin: rem-calc(20) auto;
 $list-lineheight: $paragraph-lineheight;
 $list-margin-bottom: $paragraph-margin-bottom;
 $list-style-type: disc;

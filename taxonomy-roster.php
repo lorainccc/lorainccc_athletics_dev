@@ -7,17 +7,18 @@
  * @package LCCC Framework
  */
 get_header(); ?>
-<div class="row page-content">
-<div class="small-12 medium-12 large-12 columns breadcrumb-container">
+<div class="grid-container">
+<div class="grid-x grid-margin-x page-content">
+<div class="small-12 medium-12 large-12 cell breadcrumb-container">
    <?php get_template_part( 'template-parts/content', 'breadcrumb' ); ?>
 </div>
-<div class="medium-4 large-4 columns hide-for-small-only">
-	<div class="small-12 medium-12 large-12 columns sidebar-widget">
-		<div class="small-12 medium-12 large-12 columns sidebar-menu-header">
+<div class="medium-4 large-4 cell hide-for-small-only">
+	<div class="small-12 medium-12 large-12 cell sidebar-widget">
+		<div class="small-12 medium-12 large-12 cell sidebar-menu-header">
 		<h3>Varsity Sports</h3>
 		</div>
 	<?php	if ( has_nav_menu( 'left-nav' ) ) : ?>
-	<div id="secondary" class="medium-12 columns secondary nopadding">
+	<div id="secondary" class="medium-12 cell secondary nopadding">
 		<?php if ( has_nav_menu( 'left-nav' ) ) : ?>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php
@@ -36,14 +37,14 @@ get_header(); ?>
 				<?php } ?>
 	</div>
 	</div>
-	<div class="small-12 medium-8 large-8 columns">		
+	<div class="small-12 medium-8 large-8 cell">
 <div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<?php if ( have_posts() ) : 
+			<?php if ( have_posts() ) :
 								$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 			endif; ?>
-			
-			<?php 
+
+			<?php
 			 $archive_args = array(
 						'post_type' => 'lccc_player',
 						'roster' => $term->slug,// get only players in current taxonomy
@@ -52,10 +53,10 @@ get_header(); ?>
 						'orderby'=> 'meta_value',
 						'meta_key' => 'lccc_athletics_player_profile_jersey_number',
     );
-			
+
 				$archive_query = new WP_Query( $archive_args );
 			?>
-		<?php if ( $archive_query->have_posts()  ) : 
+		<?php if ( $archive_query->have_posts()  ) :
 					$sport = lccc_athletics_player_profile_get_meta('lccc_athletics_player_profile_sport');
 					$sport = lccc_athletics_player_profile_get_meta('lccc_athletics_player_profile_sport');
 					$sport = strtolower($sport);
@@ -88,16 +89,16 @@ get_header(); ?>
 											* If you want to override this in a child theme, then include a file
 											* called content-___.php (where ___ is the Post Format name) and that will be used instead.
 											*/
-											get_template_part( 'template-parts/content','roster' );		
-								 endwhile; 
+											get_template_part( 'template-parts/content','roster' );
+								 endwhile;
 									?>
-		
+
 								</tbody>
 			</table>
 			<?php
 			}
 			 endif; ?>
-			<?php 
+			<?php
 									if($sport == 'cross-country'){
 										?>
 										<header class="page-header" style="padding-top:0;">
@@ -127,18 +128,18 @@ get_header(); ?>
 											$args = array(
 												'post_type' => 'lccc_player',
 												'roster' => $term->slug,
-												'orderby'=> 'title', 
-													'order' => 'ASC', 
+												'orderby'=> 'title',
+													'order' => 'ASC',
 											);
 											$ccfemalequery = new WP_Query( $args );
 										 if ( $ccfemalequery->have_posts() ) :
 														while ( $ccfemalequery->have_posts() ) : $ccfemalequery->the_post();
 																 $gender = lccc_athletics_player_profile_get_meta('lccc_athletics_player_profile_gender');
 																			if( $gender == 'Female' ){
-																				get_template_part( 'template-parts/content','cross-country' );		
+																				get_template_part( 'template-parts/content','cross-country' );
 																				}
 													endwhile;
-														wp_reset_postdata(); 
+														wp_reset_postdata();
 											endif;
 										?>
 											<tr class="section-header">
@@ -154,10 +155,10 @@ get_header(); ?>
 														while ( $ccmalequery->have_posts() ) : $ccmalequery->the_post();
 																 $gender = lccc_athletics_player_profile_get_meta('lccc_athletics_player_profile_gender');
 																			if( $gender == 'Male' ){
-																				get_template_part( 'template-parts/content','cross-country' );		
+																				get_template_part( 'template-parts/content','cross-country' );
 																				}
 													endwhile;
-														wp_reset_postdata(); 
+														wp_reset_postdata();
 											endif;
 											?>
 									</table>
@@ -166,11 +167,12 @@ get_header(); ?>
 			?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
-</div>	
-		<div class="small-12 columns show-for-small-only">
+</div>
+		<div class="small-12 cell show-for-small-only">
 				<?php if ( is_active_sidebar( 'lccc-announcements-sidebar' ) ) { ?>
 							<?php dynamic_sidebar( 'lccc-announcements-sidebar' ); ?>
 				<?php } ?>
 	</div>
+</div>
 </div>
 <?php get_footer(); ?>
