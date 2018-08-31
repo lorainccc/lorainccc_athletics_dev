@@ -47,10 +47,13 @@ table.roster-table tbody tr.section-header{
 
 header.entry-header p {
     margin-bottom: 0
-				@media screen and (max-width: 63.9375em) {
-							padding: 0 1rem;
-					}	
 }
+
+@media screen and (max-width: 63.9375em) {
+	header.entry-header p {
+			padding: 0 1rem;
+	}
+	}
 
 h1.entry-title {
     line-height: 110%;
