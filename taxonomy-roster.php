@@ -127,6 +127,7 @@ get_header(); ?>
 											$args = array(
 												'post_type' => 'lccc_player',
 												'roster' => $term->slug,
+												'posts_per_page'=> -1,   // this will display all posts on one page
 												'orderby'=> 'title', 
 													'order' => 'ASC', 
 											);
