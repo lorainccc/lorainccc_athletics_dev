@@ -72,7 +72,7 @@ get_header();
 																										<a href="<?php the_permalink();?>"><?php the_title('<h3 class="eventtitle">','</h3>');?></a>
 																						<?php
 																						}
-																						the_content('<p>','</p>');
+																						the_excerpt('<p>','</p>');
 																												if( $altlink != ''){
 																							?>
 																						<a class="button" href="<?php echo $altlink; ?>">More Information</a>
@@ -95,7 +95,7 @@ get_header();
 																								<a href="<?php the_permalink();?>"><?php the_title('<h3 class="eventtitle">','</h3>');?></a>
 																									<?php
 																								}
-																						the_content('<p>','</p>');
+																						the_excerpt('<p>','</p>');
 																						if( $altlink != ''){
 																							?>
 											<a class="button" href="<?php echo $altlink; ?>">More Information</a>											
