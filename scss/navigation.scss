@@ -46,8 +46,8 @@ div.header-menu-widgets ul.menu li a:hover{
     }
 }
 
-header nav a,header nav a:hover {
-    color: #fefefe;
+header nav a,header nav a:hover, header nav a:focus {
+    color: #fff;
     font-size: .875rem;
     font-weight: 600
 }

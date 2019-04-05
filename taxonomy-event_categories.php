@@ -83,8 +83,8 @@ $query = new WP_Query( $args );
      echo '<p>' . $term->description . '</p>';
 
 			// output the link to the page that contains the Category Description
-			$siteurl= get_site_url();
-			echo '<a class="button" href="'.$siteurl.'/' . $term->slug .'">'. 'Learn More</a>';
+			// $siteurl= get_site_url();
+			// echo '<a class="button" href="'.$siteurl.'/' . $term->slug .'">'. 'Learn More</a>';
 			
      
         // Start the Loop

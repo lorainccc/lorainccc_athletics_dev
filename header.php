@@ -20,6 +20,13 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'lccc-framework' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
+  <div class="row show-for-small-only mobile-nav-bar">
+    <div class="small-8 columns"> <a href="/athletics"><img src="/athletics/wp-content/themes/lorainccc_athletics/images/lccc-commodore-logo-white.png" alt="Lorain County Community College Logo" width="165" height="31.875" /></a> </div>
+    <div class="small-2 columns clearfix"> <span data-responsive-toggle="mobile-search" data-hide-for="medium"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/magnifying-glass.svg" height="25" width="25" alt="Search the LCCC Athletics Website" class="float-right" data-toggle/></span> </div>
+    <div class="small-2 columns"> <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle></button>
+      </span> </div>
+  </div>
 		  <div class="row show-for-medium">
     <div class="large-6 medium-6 columns"><a href="<?php echo esc_url( home_url( '' ) ); ?>"><img src="/athletics/wp-content/uploads/sites/8/2016/07/Commodores-Athletics-web-logo.png" height="92" width="400" alt="Lorain County Community College Logo" /></a>  </div>
     <div class="large-6 medium-6 columns header-menu-widgets">
@@ -44,9 +51,8 @@
      </div>
     </div>
   </div>
-<div class="medium-blue-bg show-for-medium">
-    <div class="row">
-      <div class="large-12 columns">
+<div id="responsive-menu" class="medium-blue-bg ">
+      <div class="small-12">
         <nav class="menu-centered">
 									<?php
           wp_nav_menu(array(
@@ -64,42 +70,6 @@
       </div>
     </div>
   </div>
-  <div class="row show-for-small-only mobile-nav-bar">
-    <div class="small-8 columns"> <a href="/athletics"><img src="/athletics/wp-content/themes/lorainccc_athletics/images/lccc-commodore-logo-white.png" alt="" width="165" height="31.875" /></a> </div>
-    <div class="small-2 columns clearfix"> <span data-responsive-toggle="mobile-search" data-hide-for="medium"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/magnifying-glass.svg" height="25" width="25" alt="" class="float-right" data-toggle/></span> </div>
-    <div class="small-2 columns"> <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
-      <button class="menu-icon" type="button" data-toggle></button>
-      </span> </div>
-  </div>
-  <div id="mobile-search" class="show-for-small-only">
-    <div class="row">
-      <div class="small-12 columns">
-        <form role="search" method="get" class="search-form" action="">
-          <label>
-            <input type="search" placeholder="Search" name="s" />
-          </label>
-        </form>
-      </div>
-    </div>
-  </div>
-  <div id="responsive-menu" class="show-for-small-only">
-    <ul class="vertical menu" data-drilldown data-parent-link="true">
-
-					<?php 	wp_nav_menu(array(
-													'container' => false,
-													'menu' => __( 'Drill Menu', 'textdomain' ),
-													'menu_class' => 'vertical menu',
-													'theme_location' => 'athletics-mobile-primary',
-													'menu_id' => 'mobile-primary-menu',
-														//Recommend setting this to false, but if you need a fallback...
-													'fallback_cb' => 'lc_drill_menu_fallback',
-													'walker' => new lc_drill_menu_walker(),
-												));
-					?>
-
-    </ul>
-  </div>
-
 
 	</header><!-- #masthead -->
 

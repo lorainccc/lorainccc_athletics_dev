@@ -1,6 +1,10 @@
 /*!
 Section 2: Content
 */
+div.content table thead, table tbody, table tfoot{
+    border:0;
+}
+
 @media only screen and (min-width: 40em) {
 div.columns.event-list-event-container{
 	padding: 0;
@@ -37,6 +41,59 @@ table.roster-table tbody tr.section-header{
     border-bottom: 1px solid #CCC;
 				border-top: 1px solid #CCC;
 }
+
+main.site-main table thead{
+    background: #0055A5;
+    color: #fff;
+}
+
+.entry-content table, .page-content table {
+    margin: 0 0 1em 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-top: none;
+		display: table;
+}
+
+.entry-content table th, .page-content table th {
+    padding: .5em .75em;
+    vertical-align: top;
+    font-weight: bold;
+    text-align: left;
+    background: #0055a5;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.1em;
+}
+
+.entry-content table th[scope=row], .page-content table th[scope=row]{
+    padding:.5em .75em;
+    font-weight:bold;
+    text-align:left;
+    background:#f6f6f6;
+    color:#000}
+
+.entry-content table td, .page-content table td{
+    border-top: 1px solid #ccc;
+    padding: .3em .75em;
+    vertical-align: top;
+}
+.entry-content table.outerformtablerows, .page-content table.outerformtablerows{
+   border: 0;
+   background: #fff;
+}
+/*.entry-content table tr.odd {
+    background: #f7f7f7;
+}*/
+
+.entry-content table.outerformtablerows tbody, .page-content table.outerformtablerows tbody{
+    border:0
+}
+
+table tbody tr:nth-child(even){
+    background: none;
+}
+
 .pagecontainer {
     margin-top: .2rem
 }

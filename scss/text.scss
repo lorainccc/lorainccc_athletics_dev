@@ -33,7 +33,13 @@ div.columns.event-date p.athletics-day {
     font-weight: 700;
     font-size: 1.75rem;
 }
-a{font-family:'Open Sans',sans-serif}
+
+a, a:focus {
+  font-family:'Open Sans',sans-serif;
+  color: $medium-blue;
+  font-weight: 500;
+ }
+
 a:hover{text-decoration: underline;}
 p.roster-name{
 		font-size: 1rem;

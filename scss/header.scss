@@ -1,18 +1,60 @@
 /*!
 Section 4: Header
 */
-input[name=search],input[name=search]:focus { 
+.searchbox{
+    height: 70px;
+    padding: 15px 0 15px 0;
+}
+
+input#s,input#s:focus {
     max-width: 260px;
     width: 100%;
-    height: 2rem;
-    margin: .5rem 0 0 0;
+    height: 35px;
+    margin: 0 15px 0 0;
     border-radius: 20px;
     padding: .25rem .25rem .25rem 2.2rem;
     font-size: .75rem;
     font-weight: 700;
     background-image: url(/wp-content/themes/lorainccc/images/icons/icon-search.png);
     background-repeat: no-repeat;
-    background-position: .75rem .45rem
+    background-position: .75rem .45rem;
+    float: left;
+}
+
+#searchsubmit {
+    -webkit-box-shadow: inset 0 1px 0 0 #f9eca0;
+    box-shadow: inset 0 1px 0 0 #f9eca0;
+    background: -moz-linear-gradient(center top,#ffeba8 5%,#ffc800 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffeba8',endColorstr='#ffc800');
+    background-color: #ffeba8;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-indent: 0;
+    border: 1px solid #e6b103;
+    display: inline-block;
+    color: #303030;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 1px 1px 0 #fff;
+    padding: 8px 18px;
+    float: left;
+}
+
+#searchsubmit:hover {
+    background: -moz-linear-gradient(center top,#ffc800 5%,#ffeba8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc800',endColorstr='#ffeba8');
+    background-color: #ffc800
+}
+
+#searchsubmit:active {
+    position: relative;
+    top: 1px
 }
 
 a.skip-link.screen-reader-text {
